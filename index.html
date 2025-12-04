@@ -3,6 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
 
   <title>Lustra Marketing</title>
 
@@ -31,76 +35,50 @@
 </head>
 
 <body>
-<div class="bg-dots-gradient">
+
 <nav class="navbar">
     <div class="nav-inner">
-        <!-- Left: Logo -->
-        <div class="nav-left">
-            <a href="#" class="logo">
-                <img src="/images/lustra-nav-logo.png" alt="Lustra Logo">
-            </a>
+
+        <!-- LEFT LOGO -->
+        <div class="nav-logo">
+            <img src="/images/lustra-nav-logo.png" alt="Logo">
         </div>
 
-        <!-- Center links -->
-        <div class="nav-center" id="mobileMenu">
+        <!-- NAV LINKS -->
+        <div class="nav-links" id="navMenu">
             <a href="#">About Us</a>
             <a href="#">Services</a>
             <a href="#">Pricing</a>
+            <a class="nav-cta" href="#">Contact Us</a>
         </div>
 
-        <!-- CTA Button -->
-        <div class="nav-right">
-            <a href="#" class="cta-btn"><span>Get in touch</span></a>
-        </div>
-
-        <!-- Hamburger Icon -->
+        <!-- MOBILE MENU BUTTON -->
         <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
     </div>
 </nav>
 
+
 <section class="hero">
-    <div class="hero-content">
 
-        <!-- Top Features Row -->
-        <div class="hero-features">
-            <div class="feature">
-                <span class="icon">✔</span>
-                Monthly Design Subscription
-            </div>
-            <div class="feature">
-                <span class="icon">✔</span>
-                Fast Turnaround
-            </div>
-            <div class="feature">
-                <span class="icon">✔</span>
-                Pause or Cancel Anytime
-            </div>
-        </div>
+    <!-- FLOATING LOGO IMAGES (sphere replacements) -->
+    <img src="/images/hero-left-bottom-1.png" class="float-img f1">
+    <img src="/images/hero-right-middle-2.png" class="float-img f2">
+    <img src="/images/nav-middle-logo-new-3.png" class="float-img f3">
 
-        <!-- Headline -->
-        <h1 class="hero-title">
-            The Unlimited<br>
-            Design Feast for<br>
-            SaaS & Tech Leaders.
-        </h1>
-
-        <!-- Subheadline -->
+    <div class="hero-inner">
+        <h1 class="hero-title">We Build<br>Websites.</h1>
         <p class="hero-subtitle">
-            Like having a senior designer on your team — but without the eye-watering bill.
+            Create stunning visuals for your site builder.<br>
+            Build, customize and embed — no code needed.
         </p>
-
-        <!-- CTA -->
-        <a href="#" class="hero-btn">
-            Check Out The Plans →
-        </a>
-
+        <a href="#" class="hero-btn">Ready To Book A Call?</a>
     </div>
+
 </section>
-</div>
+
+
 
 <section class="projects-section">
     <div class="fade-left"></div>
@@ -108,9 +86,9 @@
 
     <div class="projects-track">
         <!-- REAL projects -->
-        <img src="project1.jpg" class="project-item">
-        <img src="project2.jpg" class="project-item">
-        <img src="project3.jpg" class="project-item">
+        <img src="/images/projects/project1.jpg" class="project-item">
+        <img src="/images/projects/project2.jpg" class="project-item">
+        <img src="/images/projects/project3.jpg" class="project-item">
         <img src="project4.jpg" class="project-item">
 
         <!-- AUTO-LOOP: repeat twice more -->

@@ -1,3 +1,6 @@
+document.getElementById("hamburger").addEventListener("click", function () {
+    document.getElementById("navMenu").classList.toggle("open");
+
 const track = document.querySelector('.projects-track');
 let isDown = false, startX, scrollLeft;
 
