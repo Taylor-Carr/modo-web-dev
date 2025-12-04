@@ -43,7 +43,7 @@ a { text-decoration: none; color: #000; }
 .nav-cta {
     background: #000;
     color: #fff;
-    font-weight: 400;
+    font-weight: 300;
     color: #FFFFA7;
     padding: 8px 22px;
     border-radius: 24px;
@@ -109,7 +109,7 @@ a { text-decoration: none; color: #000; }
     padding: 10px 24px;
     border-radius: 24px;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 
@@ -235,13 +235,11 @@ a { text-decoration: none; color: #000; }
 /* Carousel */
 
 .projects-section {
-    margin: 0 auto;
     width: 100%;
-    overflow: hidden;
+    background: black;
     padding: 40px 0;
     position: relative;
-    max-width: 1200px;
-    background-color: #333;
+    overflow: hidden; /* keeps fade aligned */
 }
 
 
@@ -282,27 +280,41 @@ a { text-decoration: none; color: #000; }
 .fade-right {
     position: absolute;
     top: 0;
-    width: 180px;
+    width: 220px;
     height: 100%;
     z-index: 5;
     pointer-events: none;
 }
 
 .fade-left {
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 190px;       /* adjust fade width */
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+
     background: linear-gradient(
         to right,
-        rgba(255, 255, 255, 0.85) 0%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(0, 0, 0, 1) 0%,       /* full black */
+        rgba(0, 0, 0, 0) 100%      /* transparent */
     );
 }
 
 .fade-right {
+    position: absolute;
+    top: 0;
     right: 0;
+    width: 190px;       /* adjust fade width */
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+
     background: linear-gradient(
         to left,
-        rgba(255, 255, 255, 0.85) 0%,
-        rgba(255, 255, 255, 0) 100%
+        rgba(0, 0, 0, 1) 0%,       /* full black */
+        rgba(0, 0, 0, 0) 100%      /* transparent */
     );
 }
 
@@ -325,21 +337,24 @@ a { text-decoration: none; color: #000; }
 /* Included */
 
 .motion-section {
+    background: black;
     padding: 40px 30px;
     text-align: center;
 }
 
 .motion-title {
-    font-size: 2.6rem;
-    font-weight: 700;
+    font-size: 2.9rem;
+    font-weight: 400;
     margin-bottom: 40px;
+    color: #FFFFFF;
 }
 
 .motion-title span {
-    background: linear-gradient(90deg, #9b4dff, #7b2cff);
+    background: linear-gradient(90deg, #FFF7A3, #FFE98A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 /* --- TABS --- */
 .motion-tabs {
@@ -397,7 +412,7 @@ a { text-decoration: none; color: #000; }
 
 /* TEXT LEFT */
 .motion-left h4 {
-    color: #7d3fea;
+    color: #FFFFA7;
     font-size: 1rem;
     margin-bottom: 10px;
 }
@@ -431,6 +446,7 @@ a { text-decoration: none; color: #000; }
 /* About Section */
 
 .story-wrapper {
+    background: black;
     height: 300vh; 
 }
 
@@ -447,11 +463,12 @@ a { text-decoration: none; color: #000; }
 .story-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 40px 40px;
     display: flex;
     gap: 60px;
-    background-color: #f7f7f7;
+    background-color: black;
     border-radius: 16px;
+    border: 0.2px solid #FFFFFF;
 }
 
 /* Left column */
@@ -475,11 +492,12 @@ a { text-decoration: none; color: #000; }
 }
 
 .story-tag {
-    font-size: 1rem;
-    font-weight: 600;
-    opacity: 0.6;
+    font-size: 1.2rem;
+    font-weight: 400;
     margin: 0;
-    color: #7d3fea;
+    background: linear-gradient(90deg, #FFF7A3, #FFE98A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Title area */
@@ -492,13 +510,14 @@ a { text-decoration: none; color: #000; }
     font-family: "Your Special Font", sans-serif;  /* <-- different font */
     font-size: 2.7rem;
     font-weight: 600;
+    color: #FFFFFF;
 }
 
 .title-line-2 {
     font-family: "Your Normal Font", sans-serif;
     font-size: 2.6rem;
     font-weight: 500;
-    color: #111;
+    color: #777;
 }
 
 /* Mobile adjustments */
@@ -528,7 +547,7 @@ a { text-decoration: none; color: #000; }
     font-size: 1.15rem;
     line-height: 1.6;
     max-width: 520px;
-    color: #777;
+    color: #fff;
     opacity: 0.55;
     transform: scale(0.97);
     transition: 
@@ -539,7 +558,7 @@ a { text-decoration: none; color: #000; }
 
 /* Active paragraph */
 .story-paragraph.active {
-    color: #111;
+    color: #fff;
     opacity: 1;
     transform: scale(1.04);
 }
@@ -573,6 +592,7 @@ a { text-decoration: none; color: #000; }
 /* FAQ */
 
 .faq-section {
+    background: black;
     padding: 60px 60px;
 }
 
@@ -591,15 +611,16 @@ a { text-decoration: none; color: #000; }
 
 .faq-left h2 {
     margin-top: 0;
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 600;
     margin-bottom: 20px;
+    color: #fff
 }
 
 .faq-left p {
     max-width: 420px;
     line-height: 1.6;
-    color: #555;
+    color: #777;
 }
 
 /* RIGHT SIDE */
@@ -612,7 +633,7 @@ a { text-decoration: none; color: #000; }
 
 /* FAQ ITEM */
 .faq-item {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #fff;
     overflow: hidden;
     transition: 0.3s ease;
 }
@@ -622,7 +643,7 @@ a { text-decoration: none; color: #000; }
     width: 100%;
     padding: 22px 28px;
     font-size: 1.15rem;
-    color: #111;
+    color: #fff;
     font-weight: 500;
     background: transparent;
     border: none;
@@ -637,7 +658,7 @@ a { text-decoration: none; color: #000; }
 
 .faq-header .arrow {
     font-size: 1.3rem;
-    color: #444;
+    color: #777;
     transition: transform 0.3s ease;
 }
 
@@ -685,6 +706,7 @@ a { text-decoration: none; color: #000; }
 
 
 .contact-mini {
+    background: black;
     padding: 120px 20px;
     text-align: center;
 }
@@ -733,6 +755,7 @@ a { text-decoration: none; color: #000; }
     background: #f9f9f9;
     font-size: 0.95rem;
     color: #333;
+    background: black;
 }
 
 .footer-container {
@@ -766,7 +789,7 @@ a { text-decoration: none; color: #000; }
 
 .footer-address {
     line-height: 1.6;
-    color: #555;
+    color: #fff;
     margin-bottom: 30px;
 }
 
@@ -784,7 +807,7 @@ a { text-decoration: none; color: #000; }
 
 .footer-col h4 {
     font-size: 0.9rem;
-    color: #555;
+    color: #fff;
     margin-bottom: 16px;
     font-weight: 500;
 }
@@ -793,12 +816,12 @@ a { text-decoration: none; color: #000; }
     display: block;
     margin-bottom: 10px;
     text-decoration: none;
-    color: #111;
+    color: #fff;
     font-weight: 500;
 }
 
 .footer-col a:hover {
-    color: #5e3adb; /* optional brand accent */
+    color: #fff; /* optional brand accent */
 }
 
 /* SOCIAL ICONS */
@@ -841,24 +864,6 @@ a { text-decoration: none; color: #000; }
     gap: 20px;
 }
 
-/* Status pill */
-.footer-status {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #fff;
-    padding: 8px 16px;
-    border-radius: 30px;
-    border: 1px solid #eaeaea;
-    font-size: 0.9rem;
-}
-
-.status-dot {
-    width: 10px;
-    height: 10px;
-    background: #3ecf8e;
-    border-radius: 50%;
-}
 
 /* Legal links */
 .footer-legal {
@@ -868,12 +873,12 @@ a { text-decoration: none; color: #000; }
 }
 
 .footer-legal a {
-    color: #555;
+    color: #fff;
     text-decoration: none;
 }
 
 .footer-legal a:hover {
-    color: #111;
+    color: #777;
 }
 
 /* RESPONSIVE */
