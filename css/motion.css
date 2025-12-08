@@ -1,5 +1,3 @@
-/* MOTION SECTION */
-
 .motion-section {
     background: black;
     padding: 80px 30px 50px;
@@ -62,13 +60,11 @@
     transition: 0.25s ease;
 }
 
-
 .motion-tab:hover {
     background: #1F1F22;
     border-color: rgba(255,255,255,0.12);
 }
 
-/* Active state */
 .motion-tab.active {
     background: #FFFFA7;
     color: #333;
@@ -77,9 +73,6 @@
 
 }
 
-/* --------------------------------------------
-   CONTENT AREA
-   -------------------------------------------- */
 .motion-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -103,15 +96,12 @@
         box-shadow 0.4s ease;
 }
 
-
-/* Panel visible */
 .motion-panel.active {
     display: flex;
     opacity: 1;
     transform: translateY(0);
 }
 
-/* TEXT LEFT */
 .motion-left {
     flex: 1;
 }
@@ -132,15 +122,10 @@
 
 .motion-right {
     position: absolute;
-    bottom: -65px;   /* move image further down to overhang */
-    right: -45px;    /* shift image right for overhang */
+    bottom: -65px;  
+    right: -45px;    
 }
 
-
-
-/* ====================================================
-   TABLET (1000px)
-   ==================================================== */
 @media (max-width: 1000px) {
 
         .motion-left h4 {
@@ -185,12 +170,6 @@
     }
 }
 
-/* ====================================================
-   MOBILE (750px)
-   ==================================================== */
-/* ====================================================
-   MOBILE (750px)
-   ==================================================== */
 @media (max-width: 750px) {
 
         .motion-left h4 {
@@ -225,7 +204,6 @@
         max-width: 100%;
     }
 
-    /* ===== 2-per-row tabs (equal width) ===== */
     .motion-tabs {
         display: flex;
         flex-wrap: wrap;
@@ -259,9 +237,6 @@
     }
 }
 
-/* ====================================================
-   EXTRA SMALL (450px)
-   ==================================================== */
 @media (max-width: 450px) {
 
         .motion-left h4 {

@@ -1,91 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
-
-
-  <title>Lustra Marketing</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Lustra Marketing — High-impact marketing, creative strategy, and custom brand experiences." />
-  <meta name="keywords" content="Lustra Marketing, marketing agency, branding, creative studio, motion design, digital marketing" />
-  <meta name="author" content="Lustra Marketing" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-  <!-- High-Resolution Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
-
-  <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-  <!-- Web App Manifest (optional but recommended) -->
-  <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<title>Lustra Marketing</title>
+<meta name="description" content="Lustra Marketing — High-impact marketing, creative strategy, and custom brand experiences." />
+<meta name="keywords" content="Lustra Marketing, marketing agency, branding, creative studio, motion design, digital marketing" />
+<meta name="author" content="Lustra Marketing" />
+<meta name="robots" content="index, follow" />
+<link rel="icon" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="stylesheet" href="/css/style.css" />
 </head>
-
 <body>
-
 <nav class="navbar">
-    <div class="nav-inner">
-
-        <!-- LEFT LOGO -->
-        <div class="nav-logo">
-            <img src="/images/hero/lustra-nav-logo.png" alt="Logo">
-        </div>
-
-        <!-- NAV LINKS -->
-        <div class="nav-links" id="navMenu">
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Pricing</a>
-            <a class="nav-cta" href="#">Contact Us</a>
-        </div>
-
-        <!-- MOBILE MENU BUTTON -->
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="/images/hero/lustra-nav-logo.png" alt="Logo">
     </div>
+    <div class="nav-links" id="navMenu">
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a class="nav-cta" href="https://calendly.com/taylormichaelcarr/meeting" target="_blank">Contact Us</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
-
-
 <section class="hero">
-
-    <!-- FLOATING LOGO IMAGES (sphere replacements) -->
     <img src="/images/hero/hero-left-bottom-1.png" class="float-img f1">
     <img src="/images/hero/hero-right-middle-2.png" class="float-img f2">
     <img src="/images/hero/nav-middle-logo-new-3.png" class="float-img f3">
-
     <div class="hero-inner">
-        <h1 class="hero-title">We Build<br>Websites.</h1>
+        <h1 class="hero-title">BUILDING WEBSITES <BR>THAT WORK.</h1>
         <p class="hero-subtitle">
-            Create stunning visuals for your site builder.<br>
-            Build, customize and embed — no code needed.
+            Affordable, professional and easy to use websites for small businesses in Bristol.
         </p>
-        <a href="#" class="hero-btn">Ready To Book A Call?</a>
+        <a href="https://calendly.com/taylormichaelcarr/meeting" target="_blank" class="hero-btn">Get Your Website Started</a>
     </div>
-
 </section>
-
-
-
+<section class="motion-section" id="pricing">
+    <div class="motion-container">
+        <div class="motion-header">
+            <h2 class="motion-title">WHAT'S<br>THE PLAN?</h2>
+            <p class="motion-subtext">
+                To stop putting potential customers off - See what's included for £150 (domain purchased separately) - Hosting, build, pricing, and updating your website.
+            </p>
+        </div>
+        <div class="motion-tabs">
+            <button class="motion-tab active" data-target="tab1">Hosting</button>
+            <button class="motion-tab" data-target="tab2">Build</button>
+            <button class="motion-tab" data-target="tab3">Pricing</button>
+            <button class="motion-tab" data-target="tab4">Updates</button>
+        </div>
+        <div class="motion-content">
+            <div id="tab1" class="motion-panel active">
+            <div class="motion-left">
+                <h4>Hosting</h4>
+                <h3>
+                We'll host your website for free. No monthly fees, no surprise renewals,
+                and no ongoing or hidden costs at all. We can use a current domain name or purchase one on your behalf.
+                </h3>
+            </div>
+            </div>
+            <div id="tab2" class="motion-panel">
+            <div class="motion-left">
+                <h4>Build</h4>
+                <h3>
+                We code our websites from scratch. We don't sell templates. Every website has a clear user journey,
+                simple navigation, and a professional industry standard design built for tradespeople.
+                </h3>
+            </div>
+            </div>
+            <div id="tab3" class="motion-panel">
+            <div class="motion-left">
+                <h4>Pricing</h4>
+                <h3>
+                One flat fee of £150 plus the cost of your domain name (if you don't already have one). £150 includes - Your Website build, logo
+                design, graphics and copy writing, hosting and updates. No ongoing payments.
+                </h3>
+            </div>
+            </div>
+            <div id="tab4" class="motion-panel">
+            <div class="motion-left">
+                <h4>Updates</h4>
+                <h3>
+                Need something changed later? Just let us know -
+                we're always happy to update your website whenever you need. We'll also perform maintenance to keep up with SEO and accessibility standards.
+                </h3>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="projects-section">
     <div class="fade-left"></div>
     <div class="fade-right"></div>
-
     <div class="projects-track">
-        <!-- REAL projects -->
         <img src="/images/projects/project1.jpg" class="project-item">
         <img src="/images/projects/project2.jpg" class="project-item">
         <img src="/images/projects/project3.jpg" class="project-item">
@@ -93,8 +113,6 @@
         <img src="/images/projects/project5.jpg" class="project-item">
         <img src="/images/projects/project6.jpg" class="project-item">
         <img src="/images/projects/project7.jpg" class="project-item">
-
-        <!-- AUTO-LOOP: repeat twice more -->
         <img src="/images/projects/project1.jpg" class="project-item">
         <img src="/images/projects/project2.jpg" class="project-item">
         <img src="/images/projects/project3.jpg" class="project-item">
@@ -102,7 +120,6 @@
         <img src="/images/projects/project5.jpg" class="project-item">
         <img src="/images/projects/project6.jpg" class="project-item">
         <img src="/images/projects/project7.jpg" class="project-item">
-
         <img src="/images/projects/project1.jpg" class="project-item">
         <img src="/images/projects/project2.jpg" class="project-item">
         <img src="/images/projects/project3.jpg" class="project-item">
@@ -112,320 +129,286 @@
         <img src="/images/projects/project7.jpg" class="project-item">
     </div>
 </section>
-
-
-<section class="three-column-section">
-    <div class="cols-wrapper">
-
-        <div class="col-item">
-            <h3>AI.</h3>
-            <p>
-                The technology no one can afford to ignore—but most struggle to implement 
-                securely, understand fully, or use effectively.
-            </p>
+<section class="timeline" id="process">  
+  <div class="container">
+    <h2>WHAT'S THE<br>DEAL THEN?</h2>
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+      <div class="timeline-item">
+        <div class="timeline-content left">
+          <h3 class="subsection-title">Preview</h3>
+          <p>
+            We start by sending you a fully built example website based on your business.
+            You get to see exactly what your site could look like right away - no guesswork.
+          </p>
         </div>
-
-        <div class="col-item">
-            <h3>GAP.</h3>
-            <p>
-                The gap between technology, skills and people resources.
-            </p>
+        <div class="timeline-circle">1</div>
+        <div class="timeline-image right">
+          <img src="images/step1.jpg" alt="Preview Website" />
         </div>
-
-        <div class="col-item">
-            <h3>CLOSED.</h3>
-            <p>
-                Real solutions. Real people. Real outcomes.
-            </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-image left">
+          <img src="images/step2.jpg" alt="Customise Website" />
         </div>
-
+        <div class="timeline-circle">2</div>
+        <div class="timeline-content right">
+          <h3 class="subsection-title">Customise</h3>
+          <p>
+            If you like the example, we make it your own by adjusting colours, wording,
+            services and layout etc, plus creating a completely new logo if needed.
+          </p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-content left">
+          <h3 class="subsection-title">Approve</h3>
+          <p>
+            We send your updated version for review and make any final changes you'd like.
+            You're free to request edits until you're completely happy with the result.
+          </p>
+        </div>
+        <div class="timeline-circle">3</div>
+        <div class="timeline-image right">
+          <img src="images/step3.jpg" alt="Website Review" />
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-image left">
+          <img src="images/step4.jpg" alt="Launch" />
+        </div>
+        <div class="timeline-circle">4</div>
+        <div class="timeline-content right">
+          <h3 class="subsection-title">Launch</h3>
+          <p>
+            When you're ready, we'll purchase your chosen domain name and get your website live and host it for free. 
+            Need to update anything in the future? Just let us know and we'll handle it at no extra cost.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-
-
-<section class="motion-section">
-    <div class="motion-container">
-
-        <!-- Title -->
-        <h2 class="motion-title">
-            Enhance your brand with <span>motion</span>
-        </h2>
-
-        <!-- Tabs -->
-        <div class="motion-tabs">
-            <button class="motion-tab active" data-target="tab1">Explainer Video</button>
-            <button class="motion-tab" data-target="tab2">Marketing Promo</button>
-            <button class="motion-tab" data-target="tab3">Online Video Advertising</button>
-            <button class="motion-tab" data-target="tab4">Interactive & UI Animation</button>
-            <button class="motion-tab" data-target="tab5">Showreels & Case Studies</button>
-        </div>
-
-        <!-- Content Area -->
-        <div class="motion-content">
-
-            <!-- TAB 1 -->
-            <div id="tab1" class="motion-panel active">
-                <div class="motion-left">
-                    <h4>Explainer Video</h4>
-                    <h3>
-                        Ideal marketing tool that neatly<br>
-                        explains your product or service<br>
-                        in unique and custom way.
-                    </h3>
-                </div>
-                <div class="motion-right">
-                    <img src="/images/motion1.gif" alt="Explainer Animation">
-                </div>
-            </div>
-
-            <!-- TAB 2 -->
-            <div id="tab2" class="motion-panel">
-                <div class="motion-left">
-                    <h4>Marketing Promo</h4>
-                    <h3>
-                        Eye-catching promos designed<br>
-                        to engage and convert audiences.
-                    </h3>
-                </div>
-                <div class="motion-right">
-                    <img src="/images/motion2.gif" alt="Promo Animation">
-                </div>
-            </div>
-
-            <!-- TAB 3 -->
-            <div id="tab3" class="motion-panel">
-                <div class="motion-left">
-                    <h4>Online Video Advertising</h4>
-                    <h3>
-                        Creative ads crafted to stop scrolling<br>
-                        and capture attention instantly.
-                    </h3>
-                </div>
-                <div class="motion-right">
-                    <img src="/images/motion3.gif" alt="Video Ad Animation">
-                </div>
-            </div>
-
-            <!-- TAB 4 -->
-            <div id="tab4" class="motion-panel">
-                <div class="motion-left">
-                    <h4>Interactive & UI Animation</h4>
-                    <h3>
-                        Boost your product with delightful,<br>
-                        smooth interface animations.
-                    </h3>
-                </div>
-                <div class="motion-right">
-                    <img src="/images/motion4.gif" alt="UI Animation">
-                </div>
-            </div>
-
-            <!-- TAB 5 -->
-            <div id="tab5" class="motion-panel">
-                <div class="motion-left">
-                    <h4>Showreels & Case Studies</h4>
-                    <h3>
-                        Powerful storytelling through curated<br>
-                        motion reels that elevate your brand.
-                    </h3>
-                </div>
-                <div class="motion-right">
-                    <img src="/images/motion5.gif" alt="Showreel Animation">
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
+<div class="background-overlay" id="about">
 <section class="story-wrapper">
     <div class="story-section">
         <div class="story-container">
-
             <div class="story-left">
-
-                <!-- Inline icon + Open Letter label -->
                 <div class="story-header">
-                    <span class="story-tag">Open Letter</span>
+                    <img class="story-image" src="/images/story-image.png" alt="Small Business Websites">
+                    <span class="story-tag">A Quick Note</span>
                 </div>
-
-                <!-- Title with first line in different font -->
                 <h1 class="story-title">
-                    <span class="title-line-1">Hey Startup Owner!</span><br>
-                    <span class="title-line-2">Your Startup’s</span><br>
-                    <span class="title-line-2">Lives in Your Users’.</span>
+                    <span class="title-line-1">Hey Business Owner!</span><br>
+                    <span class="title-line-2">We've All Been Asked.</span><br>
+                    <span class="title-line-2">Do You Have A Website?</span>
                 </h1>
-
+                </div>
+                <div class="story-right">
+                    <p class="story-paragraph">
+                    Before building websites, I worked as a self-employed Decorator for 8 years, so I've seen
+                    firsthand how customers decide who to work with.
+                    </p>
+                    <p class="story-paragraph">
+                    Most customers search “tradesperson near me”, check your Google reviews, and then your website
+                    to learn more about you and the services you offer. The last part is often where things go wrong.
+                    </p>
+                    <p class="story-paragraph">
+                    That's why having a professional website is so important, so potential customers can quickly
+                    tick every box and feel confident enough to get in touch.
+                    </p>
+                </div>
             </div>
-
-            <!-- Right side paragraphs (unchanged) -->
-            <div class="story-right">
-                <p class="story-paragraph">
-                    As a founder, you’ve poured your heart into this. Every late night, every
-                    tough decision — it’s all for your vision to come alive.
-                </p>
-
-                <p class="story-paragraph">
-                    But let’s face it: you’re not building your product for yourself.
-                    You’re building it for your users.
-                </p>
-
-                <p class="story-paragraph">
-                    The truth is, you don’t need to guess what they want. They’re already
-                    telling you — through their feedback, ideas, and even frustrations.
-                    All you have to do is listen. That’s where Qatchup comes in.
-                </p>
-            </div>
-
         </div>
-    </div>
-</section>
-
-<section class="faq-section">
+    </section>
+</div>
+<div class="three-wrapper">
+    <section class="three-column-section">
+        <div class="cols-wrapper">
+            <div class="col-item">
+                <h3>BUILD.</h3>
+                <p>
+                    We'll build your website from scratch with a clean, professional layout 
+                    focused on clarity and usability for your customers.
+                </p>
+            </div>
+            <div class="col-item">
+                <h3>HOST.</h3>
+                <p>
+                    We host your website for free, with no monthly charges or hidden fees. 
+                </p>
+            </div>
+            <div class="col-item">
+                <h3>MANAGE.</h3>
+                <p>
+                    Need changes later? No problem. Just let us know and we'll update your website 
+                    whenever you need at no extra cost.
+                </p>
+            </div>
+       </div>
+    </section>
+</div>
+<section class="faq-section" id="services">
     <div class="faq-container">
         <div class="faq-left">
             <h2>OUR SERVICES</h2>
             <p>
-                Whether you're scaling output, producing multiple iterations for a client,
-                or experimenting with new styles, exactly.ai adapts to diverse creative needs.
+                Everything you need for a professional website - design, build, free hosting and
+                branding. Simple fixed pricing, no hidden fees, and updates done for you.
             </p>
         </div>
         <div class="faq-right">
             <div class="faq-item">
                 <button class="faq-header">
-                    <span>agencies</span>
+                    <span>Website Design & Build</span>
                     <span class="arrow">›</span>
                 </button>
                 <div class="faq-content">
-                    <p>Content for agencies goes here...</p>
+                    <p>
+                        Custom built professional websites designed around your customers needs.
+                        No templates and no DIY tools. We build everything from scratch, designed for tradespeople.
+                    </p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-header">
-                    <span>art directors</span>
+                    <span>Branding & Logos</span>
                     <span class="arrow">›</span>
                 </button>
                 <div class="faq-content">
-                    <p>Content for art directors goes here...</p>
+                    <p>
+                        A custom logo and matching graphics are included with every website
+                        unless you already have branding you'd like to use.
+                    </p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-header">
-                    <span>illustrators</span>
+                    <span>Hosting Included</span>
                     <span class="arrow">›</span>
                 </button>
                 <div class="faq-content">
-                    <p>Content for illustrators goes here...</p>
+                    <p>
+                        Hosting is completely free - no monthly payments or ongoing charges.
+                    </p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-header">
-                    <span>product designer</span>
+                    <span>Support & Updates</span>
                     <span class="arrow">›</span>
                 </button>
                 <div class="faq-content">
-                    <p>Content for product designers goes here...</p>
+                    <p>
+                        Need something updated later? No problem. We're always happy to help.
+                    </p>
                 </div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-header">
-                    <span>artists</span>
+                    <span>Simple Pricing</span>
                     <span class="arrow">›</span>
                 </button>
                 <div class="faq-content">
-                    <p>Content for artists goes here...</p>
+                    <p>
+                        One flat fee of £150 per website. That's it. No contracts, no renewals
+                        and no extra fees.
+                    </p>
                 </div>
-            </div>
             </div>
         </div>
     </div>
 </section>
-
 <section class="contact-intro">
     <div class="contact-intro-inner">
-
-        <div class="intro-left">
-            <h2>BOOK AN<br>INTRO</h2>
-            <p>
-                Let's transform the way work works. Book an<br>
-                intro to see our demo in action.
-            </p>
-        </div>
-
-        <a href="#" class="intro-btn">
-            <img src="/icons/arrow-up-right.svg" alt="">
+    <div class="intro-left">
+        <h2>BOOK AN<br>INTRO</h2>
+        <p>
+            Want a professional website for your business? Book a quick intro call and
+            we’ll walk you through how it all works, pricing and what’s included.
+        </p>
+    </div>
+        <a href="https://calendly.com/taylormichaelcarr/meeting" target="_blank" class="intro-btn">
+            <img src="/images/contact-arrow.png" alt="">
         </a>
-
     </div>
 </section>
-
-
 <footer class="footer">
     <div class="footer-container">
-
-        <!-- Left Column -->
         <div class="footer-left">
             <div class="footer-logo">
-                <img src="/images/logo.png" alt="Company Logo">
-                <span>YourCompany</span>
+                <img src="/images/footer-image.png" alt="Lustra Marketing Logo">
+                <span>Lustra Marketing</span>
             </div>
-
             <p class="footer-address">
-                135 Duane St<br>
-                New York, NY 10013
+                Bristol, United Kingdom<br>
+                Serving businesses across the UK
             </p>
         </div>
-
-        <!-- Middle Columns -->
         <div class="footer-links">
             <div class="footer-col">
-                <h4>Product</h4>
-                <a href="#">Core</a>
-                <a href="#">Enterprise</a>
-                <a href="#">Pricing</a>
+                <h4>Services</h4>
+                <a href="services">What We Do</a>
+                <a href="process">How We Do It</a>
             </div>
-
             <div class="footer-col">
                 <h4>Resources</h4>
-                <a href="#">Docs</a>
-                <a href="#">FAQ</a>
+                <a href="#">FAQs</a>
+                <a href="#">Get Started</a>
             </div>
-
             <div class="footer-col">
                 <h4>Company</h4>
-                <a href="#">Careers</a>
-                <a href="#">Contact</a>
-            </div>
-
-            <div class="footer-col">
-                <h4>Social</h4>
-                <div class="footer-social">
-                    <a href="#"><img src="/icons/linkedin.svg" alt=""></a>
-                    <a href="#"><img src="/icons/x.svg" alt=""></a>
-                    <a href="#"><img src="/icons/github.svg" alt=""></a>
-                </div>
+                <a href="about">About Us</a>
+                <a href="https://calendly.com/taylormichaelcarr/meeting" target="_blank">Contact</a>
             </div>
         </div>
-
-    </div>
-
-    <!-- Dotted Divider -->
-    <div class="footer-dots"></div>
-        <div class="footer-legal">
-            <span>© 2024 YourCompany Inc.</span>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-        </div>
+            <div class="footer-legal">
+                <span>© 2025 Lustra Marketing Ltd</span>
+                <a href="#" onclick="openPolicyModal()">Privacy Policy</a>
+            </div>
     </div>
 </footer>
+<div id="privacy-popup" class="privacy-popup">
+    <div class="privacy-content">
+        <h2>Privacy & Cookies</h2>
+        <p>
+            We don't track you, store cookies, or collect personal information unless
+            you contact us. By continuing to browse, you accept our simple privacy policy.
+        </p>
+        <a href="#" onclick="openPolicyModal()"> Read Privacy Policy</a>
+        <button class="privacy-btn" onclick="closePrivacyPopup()">OK</button>
+    </div>
+</div>
+<div id="privacy-modal" class="privacy-modal">
+  <div class="privacy-modal-content">
+    <button class="privacy-close" onclick="closePolicyModal()">✕</button>
+    <h2>Privacy Policy</h2>
+    <p><strong>Last updated:</strong> December 2025</p>
+    <p>
+      We do not track users, store cookies or collect personal information
+      unless you contact us directly. Any information you share with us
+      (such as your name, email address) is only used to reply and deliver requested services.
+    </p>
 
-
+    <p>
+      We do not sell, rent or distribute personal information to any third parties.
+    </p>
+    <h3>What we collect</h3>
+    <p>
+      We only receive information that you voluntarily submit:
+    </p>
+    <ul>
+      <li>Email enquiries</li>
+      <li>Booking calls</li>
+    </ul>
+    <h3>Your rights</h3>
+    <p>
+      You may request removal of your information at any time by contacting us.
+    </p>
+    <h3>Contact</h3>
+    <p>Lustra Marketing, Bristol, United Kingdom</p>
+  </div>
+</div>
 </body>
 <script src="/js/script.js"></script>
 </html>

@@ -7,8 +7,6 @@
     overflow: hidden; 
 }
 
-
-
 .projects-track {
     display: flex;
     gap: 40px;
@@ -17,7 +15,6 @@
     animation: scrollProjects 40s linear infinite;
 }
 
-/* Image */
 .project-item {
     height: 140px;
     width: 260px;
@@ -34,7 +31,6 @@
 .projects-section:hover .projects-track {
     animation-play-state: paused;
 }
-
 
 @keyframes scrollProjects {
     0% { transform: translateX(0); }
@@ -83,8 +79,6 @@
     );
 }
 
-
-/* Responsive */
 @media (max-width: 768px) {
     .project-item {
         height: 130px;

@@ -1,4 +1,3 @@
-
 const track = document.querySelector('.projects-track');
 let isDown = false, startX, scrollLeft;
 
@@ -19,48 +18,119 @@ track.addEventListener('mousemove', e => {
     track.scrollLeft = scrollLeft - walk;
 });
 
-document.getElementById("hamburger").onclick = function () {
-    this.classList.toggle("active");
-    document.getElementById("mobileMenu").classList.toggle("open");
-};
+
+const burger = document.getElementById("hamburger");
+const menu   = document.getElementById("navMenu");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+  menu.classList.toggle("open");
+});
+
+
+// Timeline scroll animation
+document.addEventListener("scroll", () => {
+  const line = document.querySelector(".timeline-line");
+  const section = document.querySelector(".timeline");
+  const items = document.querySelectorAll(".timeline-item");
+  const windowHeight = window.innerHeight;
+
+  const firstCircle = items[0].querySelector(".timeline-circle");
+  const lastCircle = items[items.length - 1].querySelector(".timeline-circle");
+
+  // Get vertical positions of first and last circles
+  const firstY = firstCircle.getBoundingClientRect().top + window.scrollY + firstCircle.offsetHeight / 2;
+  const lastY = lastCircle.getBoundingClientRect().top + window.scrollY + lastCircle.offsetHeight / 2;
+
+  // How far user has scrolled
+  const scrollMid = window.scrollY + windowHeight / 2;
+  const scrollProgress = scrollMid - firstY;
+  const maxHeight = lastY - firstY;
+
+  // Keep line between first & last circles
+  const progress = Math.min(Math.max(scrollProgress, 0), maxHeight);
+
+  // Start the line exactly at the center of the first circle
+  line.style.top = `${firstCircle.offsetTop + firstCircle.offsetHeight / 2}px`;
+  line.style.height = `${progress}px`;
+
+  // Highlight current visible items
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const center = rect.top + rect.height / 2;
+    const isActive = center > windowHeight * 0.3 && center < windowHeight * 0.7;
+    item.classList.toggle("active", isActive);
+  });
+});
 
 
 const wrapper = document.querySelector(".story-wrapper");
 const paragraphs = document.querySelectorAll(".story-paragraph");
 
-function updateStoryScroll() {
-    const rect = wrapper.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    const wrapperHeight = rect.height;
-
-    // Before the wrapper reaches the top: nothing active
-    if (rect.top > 0) {
-        paragraphs.forEach(p => p.classList.remove("active"));
-        return;
-    }
-
-    // After we've scrolled past the wrapper: keep last paragraph active
-    if (rect.bottom <= windowHeight) {
-        paragraphs.forEach((p, i) =>
-            p.classList.toggle("active", i === paragraphs.length - 1)
-        );
-        return;
-    }
-
-    // While wrapper is in "pinned" phase
-    const totalScrollable = wrapperHeight - windowHeight;
-    const scrolledInside = Math.min(Math.max(-rect.top, 0), totalScrollable);
-    const progress = scrolledInside / totalScrollable;
-
-    const index = Math.min(
-        paragraphs.length - 1,
-        Math.floor(progress * paragraphs.length)
-    );
-
+function setActiveParagraph(index) {
     paragraphs.forEach((p, i) => {
         p.classList.toggle("active", i === index);
     });
 }
+
+function updateStoryScroll() {
+    if (!wrapper || !paragraphs.length) return;
+
+    const rect = wrapper.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const wrapperHeight = rect.height;
+
+    const isMobile = window.innerWidth <= 850;
+
+    // -------- MOBILE BEHAVIOUR (no sticky) --------
+    if (isMobile) {
+        let activeIndex = 0;
+        let smallestDistance = Infinity;
+
+        paragraphs.forEach((p, i) => {
+            const pRect = p.getBoundingClientRect();
+            const center = (pRect.top + pRect.bottom) / 2;
+            const distance = Math.abs(center - windowHeight / 2);
+
+            if (distance < smallestDistance) {
+                smallestDistance = distance;
+                activeIndex = i;
+            }
+        });
+
+        setActiveParagraph(activeIndex);
+        return;
+    }
+
+    const totalScrollable = wrapperHeight - windowHeight;
+
+    // Before the wrapper reaches the top of the viewport
+    if (rect.top > 0) {
+        setActiveParagraph(0);
+        return;
+    }
+
+    // After we've scrolled past the wrapper (bottom above viewport bottom)
+    if (rect.bottom <= windowHeight) {
+        setActiveParagraph(paragraphs.length - 1);
+        return;
+    }
+
+    // While wrapper is in pinned phase
+    const scrolledInside = Math.min(Math.max(-rect.top, 0), totalScrollable);
+    const progress = totalScrollable > 0 ? (scrolledInside / totalScrollable) : 0;
+
+    let index = Math.floor(progress * paragraphs.length);
+    index = Math.max(0, Math.min(index, paragraphs.length - 1));
+
+    setActiveParagraph(index);
+}
+
+// Run on scroll + resize + initial load
+window.addEventListener("scroll", updateStoryScroll);
+window.addEventListener("resize", updateStoryScroll);
+updateStoryScroll();
+
 
 window.addEventListener("scroll", updateStoryScroll);
 window.addEventListener("load", updateStoryScroll);
@@ -104,5 +174,26 @@ items.forEach(item => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+    if(!localStorage.getItem("privacyAccepted")){
+        document.getElementById("privacy-popup").style.display = "block";
+    }
+});
+
+function closePrivacyPopup(){
+    document.getElementById("privacy-popup").style.display = "none";
+    localStorage.setItem("privacyAccepted", true);
+}
+
+
+function openPolicyModal(){
+    document.getElementById("privacy-modal").style.display = "block";
+}
+
+function closePolicyModal(){
+    document.getElementById("privacy-modal").style.display = "none";
+}
+
 
 
