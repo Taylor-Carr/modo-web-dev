@@ -91,24 +91,14 @@
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-
     padding: 48px 40px;
-    border-radius: 22px;
-    
+    border-radius: 16px;
     background: #1C1C1F;
-
-    /* thin white-ish top border */
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-
-    /* premium shadows */
-    box-shadow:
-        0 0 22px rgba(0,0,0,0.35),
-        inset 0 0 12px rgba(255,255,255,0.04);
-
+    box-shadow: 0 0 22px rgba(0,0,0,0.35), inset 0 0 12px rgba(255,255,255,0.04);
     opacity: 0;
     transform: translateY(10px);
-    transition:
-        opacity 0.4s ease,
+    transition: opacity 0.4s ease,
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
@@ -175,6 +165,10 @@
     .motion-subtext {
         font-size: 15px;
         max-width: 300px;
+    }
+
+    .motion-content {
+        border-radius: 16px;
     }
 
     .motion-panel {
