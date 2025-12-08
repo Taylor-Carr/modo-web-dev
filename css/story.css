@@ -1,0 +1,150 @@
+/* About Section */
+
+.background-overlay {
+    background-color: black;
+}
+.story-wrapper {
+    background: #F6F6F8;
+    height: 300vh;
+    border-radius: 40px 40px 0 0;
+}
+
+
+.story-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+.story-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    display: flex;
+    gap: 60px;
+    background-color: #FFf;
+    border-radius: 24px;
+}
+
+/* Left column */
+.story-left {
+    flex: 1;
+}
+
+/* Inline icon + tag */
+.story-header {
+    display: flex;
+    align-items: center;  
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.story-image {
+    width: 22px;           
+    height: 22px;
+    object-fit: contain;   
+    opacity: 0.85;         
+}
+
+.story-tag {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* Title area */
+.story-title {
+    line-height: 1.15;
+    margin: 0;
+}
+
+.title-line-1 { 
+    color: black;
+    line-height: .95;
+    margin-bottom: 35px;
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.title-line-2 {
+    font-family: "Your Normal Font", sans-serif;
+    font-size: 2.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Mobile adjustments */
+@media (max-width: 850px) {
+
+    .story-header {
+        margin-bottom: 6px;
+    }
+
+    .title-line-1,
+    .title-line-2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Right column */
+.story-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Base paragraph style (greyed + smaller) */
+.story-paragraph {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 520px;
+    color: #333;
+    opacity: 0.55;
+    transform: scale(0.97);
+    transition: 
+        color 0.35s ease,
+        opacity 0.35s ease,
+        transform 0.35s ease;
+}
+
+/* Active paragraph */
+.story-paragraph.active {
+    color: #333;
+    opacity: 1;
+    transform: scale(1.04);
+}
+
+/* Mobile */
+@media (max-width: 850px) {
+    .story-wrapper {
+        height: auto;            
+    }
+
+    .story-section {
+        position: static;
+        height: auto;
+    }
+
+    .story-container {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .story-title {
+        font-size: 2rem
+    }
+
+    .story-paragraph {
+        font-size: 1.05rem;
+    }
+}

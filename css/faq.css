@@ -1,0 +1,129 @@
+/* FAQ */
+
+.faq-section {
+    background: black;
+    padding: 80px 80px 60px 80px;
+}
+
+.faq-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* LEFT SIDE */
+.faq-left {
+    flex: 1;
+}
+
+.faq-left h2 {
+    margin-top: 0;
+    font-size: 72px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    line-height: 0.95;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.faq-left p {
+    font-weight: 500;
+    max-width: 420px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* RIGHT SIDE */
+.faq-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* FAQ ITEM */
+.faq-item {
+    border-bottom: 1px solid #fff;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+/* Header */
+.faq-header {
+    width: 100%;
+    padding: 22px 28px;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.faq-header .arrow {
+    font-size: 1.3rem;
+    color: #777;
+    transition: transform 0.3s ease;
+}
+
+/* Content */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    background: black;
+    padding: 0 28px;
+
+    transition: max-height 0.35s ease, padding 0.35s;
+}
+
+.faq-content p {
+    padding: 18px 0 24px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-content {
+    max-height: 300px; /* enough for paragraph */
+    padding: 0 28px 18px;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+    .faq-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .faq-left {
+    flex: 1;
+    border-top: 1px solid #eee;
+}
+
+    .faq-left h2 {
+        font-size: 2.3rem;
+        margin-top: 55px;
+    }
+
+    .faq-right {
+        width: 100%;
+    }
+
+    .faq-section {
+        padding: 30px 20px 20px 20px;
+    }
+}

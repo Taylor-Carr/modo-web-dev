@@ -1,0 +1,128 @@
+/* --- NAVBAR --- */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 50;
+}
+
+
+.nav-inner {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 35px;
+}
+
+.nav-links {
+    font-family: 'Inter';
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.nav-cta {
+    background: #000;
+    color: #fff;
+    font-weight: 400;
+    color: #FFFFA7;
+    padding: 8px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+
+/* ===== BURGER ===== */
+.hamburger {
+  width: 30px;
+  height: 22px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 9999;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  transition: .35s ease;
+}
+
+
+/* ANIMATION */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+
+@media(max-width: 900px){
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    
+    background: black;
+    border-radius: 12px;
+    padding: 14px 18px;
+
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 50vw;
+    max-width: 240px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    z-index: 9999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  .nav-cta {
+    background: none;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+

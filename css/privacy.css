@@ -1,0 +1,136 @@
+.privacy-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    z-index: 9999;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.privacy-content h2{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.privacy-content p { 
+    font-size: 0.8rem;
+}
+
+.privacy-content a{
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.privacy-btn{
+    border: 1px solid #eee;
+    background: #eee;
+    color: black;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-family: 'Inter';
+    font-size: 0.7rem;
+}
+
+
+@media (max-width: 900px) {
+
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 430px) {
+
+  .privacy-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: none;
+    padding: 15px;
+    border-radius: 10px;
+    background: black;
+    z-index: 9999;
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(255,255,255,.12), 0 0 18px rgba(255,255,255,.08);
+
+}
+
+.privacy-content h2 { 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.privacy-content p { 
+    font-size: 0.7rem;
+}
+
+.privacy-content a{
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.privacy-btn{
+    border: 1px solid #eee;
+    background: #eee;
+    color: black;
+    border: none;
+    padding: 5px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 15px;
+    font-weight: 600;
+    font-family: 'Inter';
+    font-size: 0.6rem;
+}
+}
+
+
+
+/* Large Pop Up */
+.privacy-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,.7);
+  z-index: 99999;
+  padding: 30px;
+}
+
+.privacy-modal-content {
+  color: #fff;
+  background: black;
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 10px;
+  max-height: 75vh;
+  overflow-y: auto;
+}
+
+.privacy-close {
+  color: #fff;
+  float: right;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}

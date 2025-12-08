@@ -1,0 +1,319 @@
+/* MOTION SECTION */
+
+.motion-section {
+    background: black;
+    padding: 80px 30px 50px;
+    border-radius: 40px 40px 0 0;
+}
+
+.motion-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.motion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;   
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.motion-title {
+    color: #FFF;
+    margin: 0;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: .95;
+    letter-spacing: -1px;
+}
+
+.motion-subtext {
+    color: #ccc;
+    max-width: 340px;
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+}
+
+.motion-tabs {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+    gap: 14px;
+}
+
+.motion-tab {
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: #141416; 
+    color: #E6E6EB;      
+    border: 1px solid rgba(255,255,255,0.08);
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+
+.motion-tab:hover {
+    background: #1F1F22;
+    border-color: rgba(255,255,255,0.12);
+}
+
+/* Active state */
+.motion-tab.active {
+    background: #FFFFA7;
+    color: #333;
+    border-color: black;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.55);
+
+}
+
+/* --------------------------------------------
+   CONTENT AREA
+   -------------------------------------------- */
+.motion-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.motion-panel {
+    overflow: hidden;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    padding: 48px 40px;
+    border-radius: 22px;
+    
+    background: #1C1C1F;
+
+    /* thin white-ish top border */
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* premium shadows */
+    box-shadow:
+        0 0 22px rgba(0,0,0,0.35),
+        inset 0 0 12px rgba(255,255,255,0.04);
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Panel visible */
+.motion-panel.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TEXT LEFT */
+.motion-left {
+    flex: 1;
+}
+
+.motion-left h4 {
+    color: #A0A0A6;
+    font-size: 1.7rem;
+    margin-bottom: 12px;
+    margin-top: 20px;
+}
+
+.motion-left h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #E6E6EB;
+}
+
+.motion-right {
+    position: absolute;
+    bottom: -65px;   /* move image further down to overhang */
+    right: -45px;    /* shift image right for overhang */
+}
+
+
+
+/* ====================================================
+   TABLET (1000px)
+   ==================================================== */
+@media (max-width: 1000px) {
+
+        .motion-left h4 {
+        color: #A0A0A6;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .motion-left h3 {
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #E6E6EB;
+        margin-bottom: 5px;
+    }
+
+    .motion-title {
+        font-size: 55px;
+    }
+
+    .motion-subtext {
+        font-size: 15px;
+        max-width: 300px;
+    }
+
+    .motion-panel {
+        padding: 40px;
+        gap: 35px;
+    }
+
+    .motion-right img {
+        display: none;
+    }
+
+    .motion-tabs {
+        gap: 10px;
+    }
+}
+
+/* ====================================================
+   MOBILE (750px)
+   ==================================================== */
+/* ====================================================
+   MOBILE (750px)
+   ==================================================== */
+@media (max-width: 750px) {
+
+        .motion-left h4 {
+        color: #A0A0A6;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .motion-left h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #E6E6EB;
+        margin-bottom: 5px;
+    }
+
+    /* Stack title + paragraph */
+    .motion-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .motion-title {
+        font-size: 42px;
+        text-align: left;
+    }
+
+    .motion-subtext {
+        text-align: left;
+        max-width: 100%;
+    }
+
+    /* ===== 2-per-row tabs (equal width) ===== */
+    .motion-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .motion-tab {
+        flex: 1 1 calc(50% - 12px);
+        text-align: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+    }
+
+    /* Panel becomes vertical */
+    .motion-panel {
+        flex-direction: column;
+        padding: 28px 22px;
+        text-align: left;
+        border-radius: 22px;
+        gap: 55px;
+    }
+
+    .motion-left h3 {
+        font-size: 1.4rem;
+    }
+
+    .motion-right img {
+        display: none;
+    }
+}
+
+/* ====================================================
+   EXTRA SMALL (450px)
+   ==================================================== */
+@media (max-width: 450px) {
+
+        .motion-left h4 {
+        color: #A0A0A6;
+        font-size: 1rem;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .motion-left h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #E6E6EB;
+        margin-bottom: 5px;
+    }
+
+    .motion-title {
+        font-size: 34px;
+    }
+
+    .motion-panel {
+        padding: 20px 18px;
+        gap: 18px;
+    }
+
+    .motion-right img {
+        width: 180px;
+    }
+
+    .motion-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+  }
+
+    .motion-tab {
+        flex: 1 1 calc(50% - 12px);
+        text-align: center;
+        padding: 12px 0;
+        box-sizing: border-box;
+  }
+
+   .motion-right img {
+        display: none;
+    }
+}

@@ -1,0 +1,118 @@
+/* Carousel */
+.projects-section {
+    width: 100%;
+    background: black;
+    padding: 40px 0 70px 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+
+
+.projects-track {
+    display: flex;
+    gap: 40px;
+    padding-left: 40px;
+    width: max-content;
+    animation: scrollProjects 40s linear infinite;
+}
+
+/* Image */
+.project-item {
+    height: 140px;
+    width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    transition: transform .3s;
+    cursor: grab;
+}
+
+.project-item:active {
+    cursor: grabbing;
+}
+
+.projects-section:hover .projects-track {
+    animation-play-state: paused;
+}
+
+
+@keyframes scrollProjects {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+
+.fade-left,
+.fade-right {
+    position: absolute;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.fade-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190px;       
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 0%,       
+        rgba(0, 0, 0, 0) 100%      
+    );
+}
+
+.fade-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 190px;      
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+
+    background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1) 0%,       
+        rgba(0, 0, 0, 0) 100%      
+    );
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-item {
+        height: 130px;
+    }
+    .projects-track {
+        gap: 20px;
+        padding-left: 20px;
+    }
+    .fade-left,
+    .fade-right {
+        width: 80px;
+    }
+
+    .projects-section {
+    width: 100%;
+    background: black;
+    padding: 5px 0 30px 0;
+    position: relative;
+    overflow: hidden; 
+}
+
+.fade-left,
+.fade-right {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+}
