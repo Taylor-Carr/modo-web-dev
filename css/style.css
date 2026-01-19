@@ -9,12 +9,12 @@
 @import "contact.css";
 @import "footer.css";
 @import "privacy.css";
-
+@import "work.css";
 
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #FFFFA7;
+    background: #FFDA00;
 }
 
 a { text-decoration: none; color: #000; }

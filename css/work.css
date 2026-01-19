@@ -1,0 +1,55 @@
+  .work-popup{
+    position: fixed;
+    right: 70px;
+    bottom: 55px;
+    z-index: 9999;
+
+    width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+
+    opacity: 1;
+    transition: opacity .2s ease;
+    isolation: isolate;
+  }
+
+  .work-popup.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* The “carousel” area */
+  .work-popup__frame{
+    width: 260px;     /* lock exact size */
+    height: 140px;    /* lock exact size */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .work-popup__footer{
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .work-popup__close{
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    cursor: pointer;
+    line-height: 28px;
+    font-size: 18px;
+    z-index: 2;
+  }

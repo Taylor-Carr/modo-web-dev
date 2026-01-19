@@ -17,19 +17,34 @@
 }
 
 .nav-logo img {
-    height: 35px;
+    height: 20px;
+    margin-top: 3px;
 }
 
-.nav-links {
-    font-family: 'Inter';
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    font-size: 14px;
-    font-weight: 400;
-    color: #333;
-    letter-spacing: 1px;
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
+
+.nav-links a{
+  font-family: 'Inter', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: #000;
+  letter-spacing: -0.3px;
+  padding: 6px 10px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover{
+  background: black;
+  color: #FFDA00;
+}
+
 
 .nav-cta {
     background: #000;
