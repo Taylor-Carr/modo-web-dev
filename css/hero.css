@@ -127,6 +127,31 @@
     100% { transform: translateY(0); }
 }
 
+.hero-findout {
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  z-index: 10;
+  position: absolute;
+  bottom: 25px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: black; /* light grey */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-findout:hover {
+  color: black;
+}
+
+.findout-arrow {
+  width: 10px;
+  height: 10px;
+  object-fit: contain;
+}
 
 @media (max-width: 900px) {
 
