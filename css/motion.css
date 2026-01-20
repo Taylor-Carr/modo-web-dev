@@ -1,11 +1,11 @@
 .motion-section {
     background: black;
-    padding: 80px 30px 50px;
-    border-radius: 40px 40px 0 0;
+    padding: 80px 40px 50px;
+    border-radius: 30px 30px 0 0;
 }
 
 .motion-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: left;
 }
@@ -19,24 +19,26 @@
 }
 
 .motion-title {
+    font-family: 'Anton';
     color: #FFF;
     margin: 0;
-    font-size: 78px;
-    font-weight: 900;
-    line-height: .95;
-    letter-spacing: -1px;
+    font-size: 110px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 5px;
 }
 
 .motion-subtext {
-    color: #ccc;
-    max-width: 340px;
+    font-family: 'Inter';
+    font-weight: 600;
+    color: #ffda00;
+    max-width: 335px;
     font-size: 14px;
     text-align: right;
     margin: 0;
 }
 
 .motion-tabs {
-
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -74,7 +76,7 @@
 }
 
 .motion-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 

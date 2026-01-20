@@ -63,7 +63,7 @@
 @media(max-width: 900px){
 
   .hamburger {
-  all: unset; /* <— magic line */
+  all: unset; 
   width: 28px;
   height: 22px;
   display: flex;
@@ -72,35 +72,37 @@
   position: relative;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
-}
+  }
 
-.hamburger span {
-  height: 3px;
-  width: 100%;
-  background: black;
-  border-radius: 2px;
-  transition:
-    transform .35s ease,
-    opacity .25s ease;
-}
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: black;
+    border-radius: 2px;
+    transition:
+      transform .35s ease,
+      opacity .25s ease;
+  }
 
-.hamburger.active span:nth-child(1){
-  transform: rotate(45deg);
-  position: absolute;
-  top: 50%;
-}
+  .hamburger.active span:nth-child(1){
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+  }
 
-.hamburger.active span:nth-child(2){
-  opacity: 0;
-}
+  .hamburger.active span:nth-child(2){
+    opacity: 0;
+  }
 
-.hamburger.active span:nth-child(3){
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 50%;
-}
+  .hamburger.active span:nth-child(3){
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+  }
+
   .nav-inner {
     position: relative !important;
+    padding: 0 20px;
   }
 
   .nav-links {
@@ -111,28 +113,32 @@
     background: black !important;
     backdrop-filter: blur(18px) saturate(180%) !important;
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 14px 18px;
+    border-radius: 6px;
+    padding: 14px 12px;
     display: none;
     flex-direction: column;
     gap: 14px;
     width: auto;     
     min-width: 160px;
-    max-width: 300px; 
-
+    max-width: 200px; 
     z-index: 99999 !important;
     box-shadow: 0 20px 36px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.05);
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity .25s ease, transform .25s ease;
   }
+}
 
-  @media(max-width: 600px){
-    .nav-links{
-      width: 60vw !important;
-      right: 7vw!important;
+  @media(max-width: 600px) {
+    .nav-logo img {
+      height: 22px;
+      margin-top: 3px;
+  }
+    .nav-links {
+      width: 40vw !important;
+      right: 5vw!important;
       max-width: none;
-    }
+    
   }
 
   .nav-links.open {
@@ -163,8 +169,3 @@
     font-weight: 500 !important;
   }
 }
-
-
-
-
-

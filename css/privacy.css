@@ -50,16 +50,16 @@
   .privacy-popup {
     position: fixed;
     bottom: 20px;
-    left: 50%;
+    left: 40%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 60%;
     max-width: none;
     padding: 15px;
     border-radius: 10px;
     background: black;
     z-index: 9999;
     color: #fff;
-    box-shadow: 0 0 0 2px rgba(255,255,255,.12), 0 0 18px rgba(255,255,255,.08);
+    box-shadow: 0 0 0 1px rgba(255,255,255,.12), 0 0 18px rgba(255,255,255,.08);
 
 }
 
@@ -82,18 +82,19 @@
 
 .privacy-btn {
     border: 1px solid #eee;
-    background: #eee;
+    background: #FFDA00;
     color: black;
     border: none;
-    padding: 4px 20px;
-    border-radius: 12px;
+    padding: 3px 15px;
+    border-radius: 2px;
     cursor: pointer;
     margin-top: 5px;
-    margin-left: 15px;
+    margin-left: 90px;
     font-weight: 600;
     font-family: 'Inter';
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
+
 }
 
 /* Pop up modal */
