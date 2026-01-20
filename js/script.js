@@ -27,6 +27,98 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("open");
 });
 
+// re type animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  const el = document.getElementById("changingWord");
+  if (!el) return;
+
+  const words = ["SIMPLER..", "BETTER..", "FASTER.."]; 
+  let index = 0;
+
+  const speedType = 120;
+  const speedDelete = 75;
+  const pauseAfterType = 1600;
+  const pauseAfterDelete = 250;
+
+  const wait = (ms) => new Promise(r => setTimeout(r, ms));
+
+  async function typeWord(word){
+    el.textContent = "";
+    for (let i = 1; i <= word.length; i++){
+      el.textContent = word.slice(0, i);
+      await wait(speedType);
+    }
+  }
+
+  async function deleteWord(){
+    for (let i = el.textContent.length; i >= 0; i--){
+      el.textContent = el.textContent.slice(0, i);
+      await wait(speedDelete);
+    }
+  }
+
+  async function loop(){
+    while(true){
+      await typeWord(words[index]);
+      await wait(pauseAfterType);
+      await deleteWord();
+      await wait(pauseAfterDelete);
+
+      index = (index + 1) % words.length;
+    }
+  }
+
+  loop();
+});
+
+
+// work popup
+
+document.addEventListener("DOMContentLoaded", () => {
+const popup = document.getElementById("workPopup");
+const closeBtn = document.getElementById("workPopupClose");
+const frame = document.getElementById("workPopupFrame");
+
+if (!popup || !frame) return;
+
+const images = [
+    "/images/projects/project3.jpg",
+    "/images/projects/project4.jpg",
+    "/images/projects/project7.jpg"
+];
+
+// Preload for smooth swaps
+images.forEach(src => {
+    const img = new Image();
+    img.src = src;
+});
+
+let index = 0;
+frame.style.backgroundImage = `url("${images[0]}")`;
+
+// Rotate background images
+setInterval(() => {
+    index = (index + 1) % images.length;
+    frame.style.backgroundImage = `url("${images[index]}")`;
+}, 3000);
+
+// Hide on scroll (and re-show near the top)
+const hideAfter = 40; // px scrolled
+const onScroll = () => {
+    if (window.scrollY > hideAfter) popup.classList.add("is-hidden");
+    else popup.classList.remove("is-hidden");
+};
+
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+// Close button (stays closed for this page view)
+closeBtn.addEventListener("click", () => {
+    popup.classList.add("is-hidden");
+    window.removeEventListener("scroll", onScroll);
+});
+});
 
 // Timeline scroll animation
 document.addEventListener("scroll", () => {
