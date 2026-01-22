@@ -1,24 +1,3 @@
-const track = document.querySelector('.projects-track');
-let isDown = false, startX, scrollLeft;
-
-track.addEventListener('mousedown', e => {
-    isDown = true;
-    startX = e.pageX - track.offsetLeft;
-    scrollLeft = track.scrollLeft;
-});
-
-track.addEventListener('mouseleave', () => isDown = false);
-track.addEventListener('mouseup', () => isDown = false);
-
-track.addEventListener('mousemove', e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - track.offsetLeft;
-    const walk = (x - startX) * 2;
-    track.scrollLeft = scrollLeft - walk;
-});
-
-
 const burger = document.getElementById("hamburger");
 const menu   = document.getElementById("navMenu");
 
@@ -217,7 +196,6 @@ function updateStoryScroll() {
 
     setActiveParagraph(index);
 }
-
 
 // TEST CAROUSEL 
 
