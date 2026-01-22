@@ -218,6 +218,81 @@ function updateStoryScroll() {
     setActiveParagraph(index);
 }
 
+
+// TEST CAROUSEL 
+
+(function () {
+  const csTrack = document.getElementById("csTrack");
+  const csPrevBtn = document.getElementById("csPrevBtn");
+  const csNextBtn = document.getElementById("csNextBtn");
+
+  function csCardStepPx() {
+    const first = csTrack.querySelector(".cs-card");
+    if (!first) return 320;
+
+    const styles = getComputedStyle(csTrack);
+    const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+
+    return first.getBoundingClientRect().width + gap;
+  }
+
+  function csUpdateButtons() {
+    const maxScrollLeft = csTrack.scrollWidth - csTrack.clientWidth - 2;
+    csPrevBtn.disabled = csTrack.scrollLeft <= 2;
+    csNextBtn.disabled = csTrack.scrollLeft >= maxScrollLeft;
+  }
+
+  function csScrollByCard(dir) {
+    csTrack.scrollBy({ left: dir * csCardStepPx(), behavior: "smooth" });
+  }
+
+  csPrevBtn.addEventListener("click", () => csScrollByCard(-1));
+  csNextBtn.addEventListener("click", () => csScrollByCard(1));
+  csTrack.addEventListener("scroll", csUpdateButtons, { passive: true });
+  window.addEventListener("resize", csUpdateButtons);
+
+  // drag-to-scroll
+  let csIsDown = false;
+  let csStartX = 0;
+  let csStartScrollLeft = 0;
+
+  csTrack.addEventListener("pointerdown", (e) => {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    csIsDown = true;
+    csTrack.setPointerCapture(e.pointerId);
+    csStartX = e.clientX;
+    csStartScrollLeft = csTrack.scrollLeft;
+    csTrack.style.scrollBehavior = "auto";
+  });
+
+  csTrack.addEventListener("pointermove", (e) => {
+    if (!csIsDown) return;
+    const dx = e.clientX - csStartX;
+    csTrack.scrollLeft = csStartScrollLeft - dx;
+  });
+
+  function csEndDrag() {
+    if (!csIsDown) return;
+    csIsDown = false;
+    csTrack.style.scrollBehavior = "smooth";
+
+    // settle snap in some browsers
+    csTrack.scrollBy({ left: 0, behavior: "smooth" });
+    csUpdateButtons();
+  }
+
+  csTrack.addEventListener("pointerup", csEndDrag);
+  csTrack.addEventListener("pointercancel", csEndDrag);
+  csTrack.addEventListener("pointerleave", csEndDrag);
+
+  // initial state
+  csUpdateButtons();
+})();
+
+
+
+
+
 // Run on scroll + resize + initial load
 window.addEventListener("scroll", updateStoryScroll);
 window.addEventListener("resize", updateStoryScroll);
