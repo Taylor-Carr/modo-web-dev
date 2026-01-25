@@ -2,14 +2,31 @@
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: black;
+    background: #060708;
     padding: 10px 12px;
     border-radius: 6px;
-    max-width: 240px;
+    max-width: 280px;
     z-index: 9999;
     color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
+
+.privacy-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.privacy-actions {
+    display: flex;
+    align-items: center;
+}
+
+.privacy-actions a {
+    margin-right: auto; 
+}
+
+
 .privacy-content h2 {
     margin-bottom: 5px;
     margin-top: 0;
@@ -22,6 +39,7 @@
     font-size: 0.8rem;
     font-weight: 300;
     color: #999999;
+    margin: 2px 0 1px;
 }
 
 .privacy-content a {
@@ -34,14 +52,14 @@
     background: #FFDA00;
     color: black;
     border: none;
-    padding: 3px 15px;
+    padding: 6px 18px;
     border-radius: 2px;
     cursor: pointer;
     margin-top: 5px;
     margin-left: 90px;
-    font-weight: 600;
-    font-family: 'Inter';
-    font-size: 0.7rem;
+    font-weight: 800;
+  font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
 }
 
 

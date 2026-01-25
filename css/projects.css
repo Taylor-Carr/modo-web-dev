@@ -1,42 +1,80 @@
 *{ box-sizing:border-box; }
 
-
-.cs-wrap {
+.cs-wrap{
   margin:0 auto;
-  padding:28px 18px 64px;
-  background-color: black;
+  padding:5px 18px 34px;
+  background-color:#060708;
 }
 
-.cs-title {
-  text-align:center;
-  margin:0 0 18px;
-  font-size:13px;
-  color:rgba(255,255,255,.85);
-  opacity:.9;
+/* NEW: header block */
+.cs-head{
+  max-width: 1400px;
+  margin: 0 auto 28px;
+  padding: 0 clamp(18px, 4vw, 20px);
+  text-align: left;
 }
 
-.cs-shell {
+.cs-kicker{
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffda00;
+  font-family: "Inter", sans-serif;
+}
+
+.cs-heading{
+  margin: 0 0 20px;
+  font-family: "Anton", sans-serif;
+  font-size: 110px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.cs-subtitle{
+  margin: 0 0 40px;
+  max-width: 420px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.75);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.cs-shell{
   position:relative;
   padding:6px 0 54px;
   background:#060708;
+
+  /* IMPORTANT: stops page horizontal scrolling from bleed */
+  overflow-x: clip;
+}
+@supports not (overflow: clip){
+  .cs-shell{ overflow-x:hidden; }
 }
 
-.cs-bleed {
+/* keep bleed (full width) */
+.cs-bleed{
   margin-left:calc(50% - 50vw);
   margin-right:calc(50% - 50vw);
 }
 
-.cs-track {
+.cs-track{
   display:flex;
   gap:18px;
   overflow-x:auto;
   overflow-y:hidden;
-  padding:10px 18px 26px clamp(56px, 9vw, 240px);
+
+  /* START POSITION: slightly more to the right */
+  padding:10px 18px 26px clamp(90px, 11vw, 280px);
   scroll-snap-type:x mandatory;
-  scroll-padding-left:clamp(56px, 9vw, 240px);
+  scroll-padding-left:clamp(90px, 11vw, 280px);
   scroll-behavior:smooth;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:none;
+
   mask-image: linear-gradient(
     to right,
     transparent 0,
@@ -45,19 +83,19 @@
     transparent 100%
   );
 }
+.cs-track::-webkit-scrollbar{ display:none; }
 
-.cs-track::-webkit-scrollbar { 
-    display:none; 
-}
-
-.cs-card {
+/* SHOW ~3 CARDS */
+.cs-card{
   flex:0 0 auto;
-  width:clamp(260px, 22vw, 380px);
+  width: calc((min(1400px, 100vw) - 36px - 120px) / 3);
+  max-width: 420px;
+  min-width: 300px;
   scroll-snap-align:start;
 }
 
-.cs-media {
-  height:clamp(150px, 14vw, 210px);
+.cs-media{
+  height:clamp(160px, 14vw, 220px);
   border-radius:6px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.08);
@@ -65,18 +103,16 @@
   background:linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
 }
 
-.cs-media img {
+.cs-media img{
   width:100%;
   height:100%;
   object-fit:cover;
   display:block;
 }
 
+.cs-body{ padding:12px 2px 0; }
 
-.cs-body { padding:12px 2px 0; 
-}
-
-.cs-desc {
+.cs-desc{
   margin:0 0 10px;
   font-size:12.5px;
   line-height:1.45;
@@ -87,7 +123,7 @@
   overflow:hidden;
 }
 
-.cs-link {
+.cs-link{
   display:inline-flex;
   gap:8px;
   align-items:center;
@@ -96,21 +132,16 @@
   font-size:12.5px;
 }
 
-.cs-link:hover { 
-    color:rgba(233,238,245,.92); 
-}
+.cs-link:hover{ color:rgba(233,238,245,.92); }
 
-.cs-arrow {
+.cs-arrow{
   transition:transform .18s ease;
   opacity:.9;
 }
 
-.cs-link:hover .cs-arrow { 
-    transform:translateX(2px); 
-}
+.cs-link:hover .cs-arrow{ transform:translateX(2px); }
 
-
-.cs-controls {
+.cs-controls{
   position:absolute;
   left:50%;
   bottom:0;
@@ -120,7 +151,7 @@
   align-items:center;
 }
 
-.cs-controlBtn {
+.cs-controlBtn{
   width:32px;
   height:32px;
   border-radius:999px;
@@ -134,29 +165,35 @@
   transition:transform .12s ease, background .12s ease, opacity .12s ease;
 }
 
-.cs-controlBtn:hover { 
-    background:rgba(255,255,255,.07); 
-    transform:translateY(-1px); 
+.cs-controlBtn:hover{
+  background:rgba(255,255,255,.07);
+  transform:translateY(-1px);
 }
-.cs-controlBtn:active { 
-    transform:translateY(0) scale(.98); 
+.cs-controlBtn:active{
+  transform:translateY(0) scale(.98);
 }
-.cs-controlBtn[disabled] { 
-    opacity:.35; 
-    cursor:not-allowed; 
-    transform:none; 
+.cs-controlBtn[disabled]{
+  opacity:.35;
+  cursor:not-allowed;
+  transform:none;
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .cs-heading{ font-size: 46px; }
+}
 
-@media (max-width:640px) {
+/* Mobile carousel stays big cards */
+@media (max-width:640px){
   .cs-track{
     gap:14px;
-    padding:10px 18px 26px clamp(18px, 6vw, 48px);
-    scroll-padding-left:clamp(18px, 6vw, 48px);
+    padding:10px 18px 26px clamp(26px, 7vw, 56px);
+    scroll-padding-left:clamp(26px, 7vw, 56px);
   }
 
   .cs-card{
     width:clamp(240px, 78vw, 320px);
+    min-width: 0;
   }
 
   .cs-media{

@@ -1,120 +1,167 @@
 .faq-section {
-    background: black;
-    padding: 80px 80px 60px 80px;
+  background: #060708;
+  padding: 20px;
+  border-radius: 0px 0px 30px 30px;
 }
 
+/* container now centered but full width */
 .faq-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
 }
 
-.faq-left {
-    flex: 1;
+/* Title + paragraph row */
+.faq-header-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; 
+  gap: 40px;
 }
 
-.faq-left h2 {
-    margin-top: 0;
-    font-size: 72px;
-    margin-bottom: 20px;
-    font-weight: 900;
-    line-height: 0.95;
-    color: #fff;
-    letter-spacing: -1px;
+.faq-intro {
+  font-size: 14px;
+  text-align: left;
+  margin-top: 30px;
+  font-family: 'Inter';
+  font-weight: 400;
+  color: rgba(255,255,255,.75);
+  max-width: 345px;
 }
 
-.faq-left p {
-    font-weight: 500;
-    max-width: 420px;
-    line-height: 1.6;
-    font-size: 16px;
-    color: #777;
-    line-height: 1.6;
+
+/* Top FAQ Title */
+.faq-title-top {
+  font-family: "Anton";
+  font-style: italic;
+  font-size: 130px;
+  letter-spacing: 5px;
+  color: #FFDA00;
+  margin: 0 0 40px 0;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .faq-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .faq-item {
-    border-bottom: 1px solid #fff;
-    overflow: hidden;
-    transition: 0.3s ease;
+  border-bottom: 1px solid #fff;
+  overflow: hidden;
+  transition: 0.3s ease;
 }
 
 .faq-header {
-    width: 100%;
-    padding: 22px 28px;
-    font-size: 1.15rem;
-    color: #fff;
-    font-weight: 500;
-    background: transparent;
-    border: none;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-
-    transition: 0.3s ease;
+  width: 100%;
+  padding:40px 20px;
+  font-size: 6.2rem;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Anton";
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.3s ease;
+  line-height: 1;
+  letter-spacing: 2px;
 }
 
-.faq-header .arrow {
-    font-size: 1.3rem;
-    color: #777;
-    transition: transform 0.3s ease;
+/* ensures text stays centered in header */
+.faq-label {
+  flex: 1;
+  text-align: center;
 }
 
-.faq-content {
-    max-height: 0;
-    overflow: hidden;
-    background: black;
-    padding: 0 28px;
+.faq-number {
+  font-size: 6.2rem;
+  font-family: "Anton";
+  color: #FFDA00;
+  font-weight: 800;
+}
 
-    transition: max-height 0.35s ease, padding 0.35s;
+/* arrow */
+.faq-header .arrow img{
+  width: 80px;             
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+}
+
+.faq-item.active .faq-header .arrow {
+  color: #FFDA00;
+  transform: rotate(90deg);
 }
 
 .faq-content p {
-    padding: 18px 0 24px;
-    line-height: 1.6;
-    color: #eee;
+  padding: 18px 0 24px;
+  line-height: 1.6;
+  color: #eee;
+  font-family: "Inter";
+  font-weight: 300;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    max-height 0.55s ease,
+    padding 0.45s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
 }
 
 .faq-item.active .faq-content {
-    max-height: 300px; /* enough for paragraph */
-    padding: 0 28px 18px;
+  max-height: 600px;       
+  padding: 0 20px 18px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.faq-item.active .arrow {
-    transform: rotate(90deg);
-}
 
+/* ✅ responsive */
 @media (max-width: 900px) {
-    .faq-container {
-        flex-direction: column;
-        gap: 40px;
-    }
+  .faq-title-top {
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
 
-    .faq-left {
-    flex: 1;
-    border-top: 1px solid #eee;
-}
+  .faq-header {
+    font-size: 1.6rem;
+    padding: 14px 10px;
+  }
 
-    .faq-left h2 {
-        font-size: 2.3rem;
-        margin-top: 55px;
-    }
+  .faq-number {
+    font-size: 1.7rem;
+  }
 
-    .faq-right {
-        width: 100%;
-    }
+  .faq-header .arrow {
+    font-size: 1.5rem;
+  }
 
-    .faq-section {
-        padding: 30px 20px 20px 20px;
-    }
+  .faq-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .faq-intro {
+    text-align: left;
+    max-width: 100%;
+  }
 }
