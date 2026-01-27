@@ -99,6 +99,100 @@ closeBtn.addEventListener("click", () => {
 });
 });
 
+
+const CONSENT_KEY = "siteConsent_v1";
+
+function getConsent() {
+  try {
+    const raw = localStorage.getItem(CONSENT_KEY);
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+function setConsent(consentObj) {
+  localStorage.setItem(CONSENT_KEY, JSON.stringify({
+    ...consentObj,
+    updatedAt: new Date().toISOString()
+  }));
+}
+
+function hidePopup() {
+  const popup = document.getElementById("privacy-popup");
+  if (popup) popup.style.display = "none";
+}
+
+function showPopup() {
+  const popup = document.getElementById("privacy-popup");
+  if (popup) popup.style.display = "block";
+}
+
+/* --- Preferences modal open/close --- */
+function openPreferences() {
+  const modal = document.getElementById("prefs-modal");
+  const consent = getConsent();
+
+  // preload toggles
+  document.getElementById("pref-analytics").checked = !!consent?.analytics;
+  document.getElementById("pref-marketing").checked = !!consent?.marketing;
+
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+}
+
+function closePreferences() {
+  const modal = document.getElementById("prefs-modal");
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+}
+
+function openPreferencesFromMenu() {
+  // do not show the small popup; open the full preferences directly
+  hidePopup();
+  openPreferences();
+}
+
+/* --- Consent actions --- */
+function savePreferences() {
+  const analytics = document.getElementById("pref-analytics").checked;
+  const marketing = document.getElementById("pref-marketing").checked;
+
+  setConsent({ necessary: true, analytics, marketing });
+  closePreferences();
+  hidePopup();
+
+  // Optional: enable/disable scripts here based on consent
+  // applyConsent();
+}
+
+function acceptAll() {
+  setConsent({ necessary: true, analytics: true, marketing: true });
+  closePreferences();
+  hidePopup();
+  // applyConsent();
+}
+
+function rejectOptional() {
+  setConsent({ necessary: true, analytics: false, marketing: false });
+  closePreferences();
+  hidePopup();
+  // applyConsent();
+}
+
+/* Your existing function can call acceptAll or just hide popup */
+function closePrivacyPopup() {
+  acceptAll(); // matches your current “Continue” behaviour
+}
+
+/* Show popup only if no consent saved yet */
+document.addEventListener("DOMContentLoaded", () => {
+  const consent = getConsent();
+  if (!consent) showPopup();
+  else hidePopup();
+});
+
+
 // Timeline scroll animation
 document.addEventListener("scroll", () => {
   const line = document.querySelector(".timeline-line");
