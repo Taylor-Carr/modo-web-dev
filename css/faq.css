@@ -134,7 +134,7 @@
 }
 
 
-/* ✅ responsive */
+/* responsive */
 @media (max-width: 900px) {
   .faq-title-top {
     font-size: 50px;
@@ -164,4 +164,53 @@
     text-align: left;
     max-width: 100%;
   }
+}
+
+@media (max-width: 480px) {
+
+  .faq-kicker{
+  margin: 0 0 0px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.75);
+  font-family: "Inter", sans-serif;
+}
+  .faq-title-top {
+    font-size: 44px;
+    margin-bottom: 15px;
+  }
+
+  .faq-header {
+    font-size: 1.6rem;
+    padding: 14px 10px;
+  }
+
+  .faq-number {
+    font-size: 1.7rem;
+  }
+
+  .faq-header .arrow {
+    font-size: 1.5rem;
+  }
+
+  .faq-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+  }
+
+  .faq-intro {
+    text-align: left;
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  .faq-header .arrow img{
+  width: 30px;             
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  display: block;
+}
 }
