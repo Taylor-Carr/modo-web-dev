@@ -52,6 +52,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+(function(){
+  const imgs = document.querySelectorAll('.hero-thumbImg');
+  if(!imgs.length) return;
+
+  let i = 0;
+  const intervalMs = 2800; // change speed here
+
+  setInterval(() => {
+    imgs[i].classList.remove('active');
+    i = (i + 1) % imgs.length;
+    imgs[i].classList.add('active');
+  }, intervalMs);
+})();
+
 // work popup
 
 document.addEventListener("DOMContentLoaded", () => {
