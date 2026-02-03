@@ -399,14 +399,15 @@
 
     .hero {
         height: auto;
-        min-height: 80svh;
+        min-height: 90svh;
     }
 
-    @supports (height: 80dvh) {
+    @supports (height: 90dvh) {
         .hero {
-        min-height: 80dvh;
+        min-height: 90dvh;
         }
     }
+    
     .hero-title {
         font-size: 57px;
     }
