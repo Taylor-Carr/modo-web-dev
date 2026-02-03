@@ -163,7 +163,7 @@
 
 .cs-controlBtn:hover{
   background:rgba(255,255,255,.07);
-  transform:translateY(-1px);
+
 }
 .cs-controlBtn:active{
   transform:translateY(0) scale(.98);

@@ -256,6 +256,16 @@
 
 @media (max-width: 768px) {
 
+    .hero-thumbFrame{
+        width: 280px;        
+        height: 140px;
+        border-radius: 4px;
+        overflow: hidden;
+        background: rgba(0,0,0,0.08);
+        box-shadow: 0 18px 60px rgba(0,0,0,0.18);
+        position: relative;
+        }
+
     #changingWord {
         display: inline-block;
         font-style: italic;
@@ -298,7 +308,7 @@
 
     .hero {
         margin: 0;
-        height: 60vh;
+        height: 75vh;
         display: flex;
         align-items: center;
         position: relative;
@@ -433,9 +443,31 @@
             bottom: 58px;
         }
         .hero-thumbFrame{
-            width: 110px;
+            width: 180px;
             height: 82px;
         }
+
+        .f1 {
+        bottom: -100px;
+        left: -20px;
+        width: 138px;
+        opacity: 0.6;
+    }
+
+    .f2 {
+        top: 80px;
+        right: -10px;
+        width: 10px;
+        opacity: 0.8;
+    }
+
+    .f3 {
+        top: -55px;
+        right: 65px;
+        width: 90px;
+        opacity: 0.8;
+    
+    }
 }
 
 
