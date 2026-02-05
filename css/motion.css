@@ -156,7 +156,7 @@
 
 .motion-panel.active {
   display: grid;
-  grid-template-columns: 680px 1fr;
+  grid-template-columns: 480px 1fr;
   column-gap: 100px;
   align-items: start;
   opacity: 1;
@@ -206,7 +206,7 @@
   text-transform: uppercase;
   font-family: 'Anton';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 14px 0;
   font-size: 75px;
   line-height: 1.05;
