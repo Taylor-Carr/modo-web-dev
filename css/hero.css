@@ -63,6 +63,14 @@
     color: black;
 }
 
+.subtitle-highlight {
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.84rem;
+  color: black; 
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .hero-btn,
 .hero-btn-right {
@@ -211,7 +219,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: black; 
   text-decoration: none;
   cursor: pointer;
@@ -268,6 +276,7 @@
 }
 
 @media (max-width: 768px) {
+
 
     .hero-thumbFrame{
         width: 280px;        
@@ -341,7 +350,7 @@
     .hero-title { 
         font-size: 70px;
         margin-top: 10px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .hero-subtitle { 
@@ -428,7 +437,10 @@
 }
 
 @media (max-width: 480px) {
-
+    .subtitle-highlight {
+  font-size: 0.70rem;
+ 
+}
     
     .hero {
         height: auto;
@@ -448,7 +460,7 @@
     .hero-subtitle { 
         font-size: 15px;
         font-weight: 400;
-        max-width: 320px; 
+        max-width: 260px; 
     }
 
     #changingWord {

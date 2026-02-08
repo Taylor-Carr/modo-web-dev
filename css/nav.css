@@ -46,6 +46,7 @@
 }
 
 .nav-btn {
+  padding: 13px 13px 13px 6px;
     display: inline-flex;          
     align-items: center;           
     justify-content: center;      
