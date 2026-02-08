@@ -371,6 +371,7 @@
 .hero-btn {
     background: #000;
     color: #fff;
+    padding: 13px 13px 13px 6px;
 }
 
 .hero-btn-avatar {
@@ -428,7 +429,7 @@
 
 @media (max-width: 480px) {
 
-
+    
     .hero {
         height: auto;
         min-height: 90svh;

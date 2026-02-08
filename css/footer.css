@@ -176,19 +176,9 @@
 }
 
 .contact-btn {
-  font-family: 'Inter', sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #0b0f12;
-  color: #fff;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
-  margin-top:35px;
-  text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 13px 13px 13px 6px;
 }
 
   /* Push "contact-read" to the right */
