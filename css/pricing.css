@@ -1,0 +1,279 @@
+.pricing {
+  margin: 0 auto;
+  padding: 30px 30px;
+  background-color: #000;
+}
+
+.pricing-header {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 64px;
+}
+
+.cs-head-pricing {
+  max-width: 1400px;
+  margin: 0 auto 28px;
+  padding: 0 clamp(18px, 4vw, 20px);
+  text-align: left;
+}
+
+.cs-heading-pricing {
+  margin: 0 0 20px;
+  font-family: "Anton", sans-serif;
+  font-style: italic;
+  font-size: 110px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #ffda00;
+  text-transform: capitalize;
+}
+
+.cs-kicker-pricing {
+  margin: 0 0 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.pricing-header h2 {
+  margin-top: 5px;
+  font-size: clamp(20px, 3.8vw, 32px);
+  font-family: "Anton", sans-serif;
+  line-height: 1.1;
+  font-weight: 300;
+  margin: 0;
+  color: #fff;
+}
+
+.pricing-header-right p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.75);
+  margin: 5px 0 10px;
+}
+
+.cta-pricing-link {
+  display: inline-flex;
+  align-items: center;       
+  gap: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  color: #ffda00;
+  padding: 10px 10px 10 0px;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+.cta-pricing-arrow {
+  width: 8px;
+  height: 12px;
+  display: block;             
+}
+
+
+.cta-pricing-link:hover .cta-pricing-arrow {
+  transform: translateX(3px);
+}
+
+.cta-prcing-link .cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 24px;
+}
+.card {
+  border-radius: 6px;
+  padding: 60px 24px 36px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-light {
+  background: #f4f4f4;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-dark {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: radial-gradient(circle at top, #222, #000);
+  color: #fff;
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  background: #111;
+  color: #fff;
+  font-size: 11px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+  border: 1px solid #333;
+}
+
+
+.card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0 0 24px;
+}
+
+
+.card ul {
+  list-style: none;
+  padding: 28px 0;
+  margin: 0 0 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-light ul {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.card li {
+  font-size: 15px;             
+  margin-bottom: 16px;
+  padding-left: 26px;           
+  position: relative;
+  line-height: 1.5;
+}
+
+.card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.1em;                   
+  color: #FFDA00;
+  font-weight: 700;
+}
+
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 36px;
+}
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card-footer span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-footer small {
+  font-size: 12px;
+  font-weight: 400;
+  color: #aaa;
+}
+
+
+.pricing-button {
+  font-family: 'Inter', sans-serif;
+  border: none;
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: -0.5px;
+  border-radius: 4px;
+}
+
+.pricing-btn-dark {
+  background: #111;
+  color: #fff;
+}
+
+.pricing-btn-lime {
+  background: #FFDA00;
+  color: #000;
+}
+
+@media (max-width: 1000px) {
+  .pricing-header {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-grid .card:first-child {
+    grid-column: span 2; 
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .cs-head-pricing {
+  max-width: 1400px;
+  margin: 0 auto 5px;
+  padding: 0 clamp(10px, 4vw, 20px);
+  text-align: left;
+}
+
+.pricing-header {
+  margin-bottom: 24px;
+}
+
+.cta-pricing-link {
+  padding: 5px 0 10px 0px;
+
+}
+
+.cs-heading-pricing {
+font-size: 43px;
+
+}
+
+.pricing {
+  padding: 10px 10px 20px 10px;
+}
+
+.pricing-grid {
+  grid-template-columns: 1fr;
+}
+
+.pricing-grid .card:first-child {
+  grid-column: auto;
+}
+
+.card {
+  padding: 30px 24px 24px;
+}
+
+.card-dark {
+  padding: 60px 24px 24px;
+}
+
+.badge {
+  top: 15px;
+}
+}

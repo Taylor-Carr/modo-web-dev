@@ -78,18 +78,19 @@
     text-decoration: none;        
     box-sizing: border-box;       
     height: 42px;                 
-    padding: 0 12px;              
+    padding: 0 13px;              
     gap: 10px;                     
 }
 
 .hero-btn {
     background: #000;
     color: #fff;
+    padding: 13px 13px 13px 6px;
 }
 
 .hero-btn-avatar {
-    width: 30px;              /* displayed width */
-    height: 30px;             /* displayed height */
+    width: 32px;              /* displayed width */
+    height: 32px;             /* displayed height */
     border-radius: 2px;
     object-fit: cover;        /* crops image if needed */
     display: inline-block;

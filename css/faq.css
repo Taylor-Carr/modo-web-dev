@@ -15,30 +15,51 @@
   padding-bottom: 60px;
 }
 
+.cs-head-faq {
+  max-width: 1400px;
+  margin: 0 auto 28px;
+  padding: 0 clamp(18px, 4vw, 20px);
+  text-align: left;
+}
 
-.faq-kicker{
-  margin: 0 0 0px;
+.cs-kicker-faq {
+  margin: 0 0 10px;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: #fff;
   font-family: "Inter", sans-serif;
 }
 
-.faq-header-top {
-  max-width: 1400px;
-  margin: 0 auto 10px;
-  padding: 0 clamp(10px, 4vw, 20px);
-  text-align: left;
+.cs-heading-faq {
+  margin: 0 0 20px;
+  font-family: "Anton", sans-serif;
+  font-style: italic;
+  font-size: 110px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #FFDA00;
+  text-transform: capitalize;
 }
 
-.faq-intro {
+.cs-subtitle-faq {
+  margin: 0 0 40px;
+  max-width: 420px;
   font-size: 14px;
-  text-align: left;
-  margin-top: 0px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.75);
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.faq-subtext {
   font-family: 'Inter';
   font-weight: 400;
   color: rgba(255,255,255,.75);
   max-width: 345px;
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
 }
 
 
@@ -175,6 +196,16 @@
 
 @media (max-width: 480px) {
 
+  .faq-section {
+  padding: 20px;
+}
+
+   .cs-head-faq {
+  padding: 0 clamp(10px, 0vw, 20px);
+  margin-bottom: 20px;
+ 
+}
+
   .faq-kicker{
   margin: 0 0 0px;
   font-size: 12px;
@@ -182,6 +213,10 @@
   text-transform: uppercase;
   color: rgba(255,255,255,.75);
   font-family: "Inter", sans-serif;
+}
+
+.cs-heading-faq {
+  font-size: 43px;
 }
   .faq-title-top {
     font-size: 44px;

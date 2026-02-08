@@ -27,7 +27,7 @@
   gap: 30px;
 }
 
-.nav-links a{
+.nav-links a {
   font-family: 'Inter', sans-serif;
   display: inline-flex;
   align-items: center;
@@ -43,6 +43,25 @@
 .nav-links a:hover{
   background: black;
   color: #FFDA00;
+}
+
+.nav-btn {
+    display: inline-flex;          
+    align-items: center;           
+    justify-content: center;      
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    border-radius: 4px;
+    vertical-align: middle;      
+    text-decoration: none;        
+    box-sizing: border-box;       
+    height: 42px;                              
+    gap: 10px;
+    color: black;
+    border: 1px solid black;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 
