@@ -61,7 +61,7 @@
   letter-spacing: -0.5px;
   background: #141416;
   color: #E6E6EB;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
   transition: 0.25s ease;
 }
