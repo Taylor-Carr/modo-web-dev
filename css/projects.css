@@ -83,8 +83,8 @@
   mask-image: linear-gradient(
     to right,
     transparent 0,
-    black 60px,
-    black calc(100% - 60px),
+    black 20px,
+    black calc(100% - 20px),
     transparent 100%
   );
 }
@@ -223,14 +223,24 @@
     scroll-padding-left:clamp(26px, 7vw, 56px);
   }
 
-  .cs-card{
-    width:clamp(240px, 78vw, 320px);
-    min-width: 0;
-  }
+ .cs-card {
+  width: clamp(240px, 75vw, 300px);
+  flex: 0 0 auto;     
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
 
-  .cs-media{
-    height:clamp(140px, 44vw, 190px);
-  }
+.cs-media {
+  width: 100%;        
+  height: auto;        
+  max-height: 60vw;    
+  object-fit: contain; 
+}
+
+.cs-bleed {
+  margin-bottom: 20px;
+}
 
   .cs-heading {
     margin-top: 0px;

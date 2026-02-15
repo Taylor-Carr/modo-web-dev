@@ -1,3 +1,10 @@
+/* Wrapper for all content below hero */
+.section-overlap {
+    position: relative;
+    z-index: 10;          /* scrolls above hero */
+}
+
+
 .motion-section {
   background: #060708;
   padding: 40px 40px 50px;
@@ -405,7 +412,7 @@
   } 
 
   .motion-title {
-    font-size: 43px;
+    font-size: 40px;
   }
 
   .motion-panel {

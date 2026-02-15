@@ -254,8 +254,14 @@
 }
 
 .cs-heading-pricing {
-font-size: 43px;
+font-size: 40px;
+}
 
+.pricing-header-right p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.75);
+  margin: 5px 0 20px;
 }
 
 .pricing-section {
