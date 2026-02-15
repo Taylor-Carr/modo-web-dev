@@ -1,9 +1,16 @@
-.pricing {
+.pricing-section  {
   margin: 0 auto;
   padding: 30px 30px;
-  background-color: #000;
+  background-color: #060708;
+  max-width: 1400px;
 }
 
+.pricing {
+  background-color: #060708;
+  max-width: 1400px;
+  margin: 0 auto;
+
+}
 .pricing-header {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -15,7 +22,6 @@
 .cs-head-pricing {
   max-width: 1400px;
   margin: 0 auto 28px;
-  padding: 0 clamp(18px, 4vw, 20px);
   text-align: left;
 }
 
@@ -235,7 +241,6 @@
   .cs-head-pricing {
   max-width: 1400px;
   margin: 0 auto 5px;
-  padding: 0 clamp(10px, 4vw, 20px);
   text-align: left;
 }
 
@@ -253,8 +258,8 @@ font-size: 43px;
 
 }
 
-.pricing {
-  padding: 10px 10px 20px 10px;
+.pricing-section {
+  padding: 10px 15px 20px 15px;
 }
 
 .pricing-grid {

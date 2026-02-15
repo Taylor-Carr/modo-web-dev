@@ -1,11 +1,20 @@
-*{ box-sizing:border-box; }
+* { 
+  box-sizing:border-box; 
+}
 
-.cs-wrap{
+.projects-section {
   margin:0 auto;
   padding:5px 18px 34px;
   background-color:#060708;
+  max-width: 1400px;
 }
 
+.cs-wrap {
+  margin:0 auto;
+  padding:5px 18px 34px;
+  background-color:#060708;
+  max-width: 1400px;
+}
 
 .cs-head-projects {
   max-width: 1400px;
@@ -56,8 +65,7 @@
 
 
 .cs-bleed{
-  margin-left:calc(50% - 50vw);
-  margin-right:calc(50% - 50vw);
+  max-width: 1400px;
 }
 
 .cs-track{
@@ -86,13 +94,13 @@
 .cs-card{
   flex:0 0 auto;
   width: calc((min(1400px, 100vw) - 36px - 120px) / 3);
-  max-width: 420px;
-  min-width: 300px;
+  max-width: 360px;
+  min-width: 240px;
   scroll-snap-align:start;
 }
 
 .cs-media{
-  height:clamp(160px, 14vw, 220px);
+  height:clamp(110px, 14vw, 170px);
   border-radius:6px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.08);
@@ -185,10 +193,18 @@
 /* Mobile carousel stays big cards */
 @media (max-width:640px){
 
-  .cs-head-projects {
-  padding: 0 clamp(10px, 0vw, 20px);
- 
+  .projects-section {
+  padding: 10px 15px 10px 15px;
 }
+
+.cs-wrap {
+  padding: 0;
+}
+
+.cs-head-projects {
+  padding: 0;
+}
+
 
 .cs-heading-projects {
   font-size: 40px;
