@@ -6,7 +6,6 @@
   margin: 0 auto;
 }
 
-/* container now centered but full width */
 .faq-container {
   width: 100%;
   max-width: 1400px;
@@ -64,8 +63,6 @@
   margin: 0;
 }
 
-
-/* Top FAQ Title */
 .faq-title-top {
   font-family: "Anton";
   font-style: italic;
@@ -92,9 +89,9 @@
 
 .faq-header {
   width: 100%;
-  padding:20px 20px;
+  padding: 10px 20px 20px 20px;
   font-size: 4.2rem;
-  color: #fff;
+  color: #E6E6EB;
   font-weight: 500;
   font-family: "Anton";
   background: transparent;
@@ -108,7 +105,6 @@
   letter-spacing: 2px;
 }
 
-/* ensures text stays centered in header */
 .faq-label {
   flex: 1;
   text-align: center;
@@ -121,7 +117,6 @@
   font-weight: 800;
 }
 
-/* arrow */
 .faq-header .arrow img{
   width: 60px;             
   height: 60px;
@@ -164,7 +159,6 @@
 }
 
 
-/* responsive */
 @media (max-width: 900px) {
   .faq-title-top {
     font-size: 50px;
@@ -213,7 +207,7 @@
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.75);
+  color: #E6E6EB;
   font-family: "Inter", sans-serif;
 }
 

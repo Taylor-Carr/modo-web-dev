@@ -70,7 +70,6 @@
 
 .motion-tab {
   font-family: 'Inter', sans-serif;
-  
   flex: 1;
   text-align: center;
   padding: 12px 20px;
@@ -218,7 +217,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 650;
-  color: #2a2f36;          
+  color: #0b0f12;          
 }
 
 .motion-media-title h3 {
@@ -271,7 +270,7 @@
 
 .stat-value {
   font-family: 'Inter';
-  font-size: 45px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 0 0 10px 0;
@@ -306,6 +305,7 @@
 
 .copy-block h4 {
   font-family: 'Inter';
+  font-style: italic;
   font-weight: 800;
   font-size: 19px;
   letter-spacing: -0.2px;
