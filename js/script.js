@@ -1,3 +1,27 @@
+const navbar = document.querySelector('.navbar');
+let lastScroll = 0;
+
+// On load animation
+window.addEventListener('load', () => {
+  navbar.classList.add('nav-loaded');
+});
+
+// Direction-aware scroll animation
+window.addEventListener('scroll', () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    navbar.classList.add('nav-compressed');
+  }
+
+  if (currentScroll < lastScroll) {
+    navbar.classList.remove('nav-compressed');
+  }
+
+  lastScroll = currentScroll;
+});
+
+
 const burger = document.getElementById("hamburger");
 const menu   = document.getElementById("navMenu");
 
@@ -5,6 +29,7 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   menu.classList.toggle("open");
 });
+
 
 // re type animation
 
