@@ -453,23 +453,23 @@
 
 @media (max-width: 480px) {
     .subtitle-highlight {
-  font-size: 0.70rem;
+    font-size: 0.70rem;
  
 }
     
     .hero {
         height: auto;
-        min-height: 90svh;
+        min-height: 100svh;
     }
 
-    @supports (height: 90dvh) {
+    @supports (height: 100dvh) {
         .hero {
-        min-height: 90dvh;
+        min-height: 100dvh;
         }
     }
     
     .hero-title {
-        font-size: 50px;
+        font-size: 48px;
         letter-spacing: 3px;
     }
 
@@ -484,7 +484,7 @@
         display: inline-block;
         font-style: italic;
         font-weight: 600;
-        font-size: 50px;
+        font-size: 48px;
         letter-spacing: 3px;
     }
 
