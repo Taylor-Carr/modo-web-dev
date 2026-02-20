@@ -38,11 +38,12 @@
 
 
 .motion-title {
+  line-height: 1.1;
   font-family: 'Anton';
   font-style: italic;
   color: #FFF;
   margin: 0;
-  font-size: 110px;
+  font-size: 90px;
   font-weight: 800;
   line-height: 1;
   letter-spacing: 5px;
@@ -412,7 +413,7 @@
   } 
 
   .motion-title {
-    font-size: 40px;
+    font-size: 38px;
   }
 
   .motion-panel {

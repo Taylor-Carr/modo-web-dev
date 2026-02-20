@@ -23,7 +23,7 @@
 }
 
 .hero-inner {
-    max-width: 990px;
+    max-width: 1040px;
     position: relative;
     z-index: 10;
     margin-top: -5px;
@@ -36,7 +36,7 @@
     color: black;
     font-family: 'Anton';
     font-style: italic;
-    font-size: 120px;
+    font-size: 90px;
     font-weight: 600;
     line-height: 1;
     letter-spacing: 5px;
@@ -46,7 +46,7 @@
   display: inline-block;
   font-style: italic;
   font-weight: 600;
-  font-size: 120px;
+  font-size: 90px;
   letter-spacing: -0.2px;
 }
 
@@ -71,10 +71,10 @@
 
 
 .hero-subtitle {
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 600;
     margin-bottom: 40px;
-    max-width: 350px;
+    max-width:  450px;
     color: black;
 }
 
@@ -476,7 +476,7 @@
     .hero-subtitle { 
         font-size: 15px;
         font-weight: 400;
-        max-width: 260px;
+        max-width: 310px;
         margin-bottom: 40px;
     }
 

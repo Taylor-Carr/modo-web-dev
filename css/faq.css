@@ -33,11 +33,11 @@
 }
 
 .cs-heading-faq {
+  line-height: 1.1;
   margin: 0 0 20px;
   font-family: "Anton", sans-serif;
   font-style: italic;
-  font-size: 110px;
-  line-height: 1;
+  font-size: 90px;
   letter-spacing: 2px;
   color: #FFDA00;
   text-transform: capitalize;
@@ -85,6 +85,7 @@
   border-bottom: 1px solid #fff;
   overflow: hidden;
   transition: 0.3s ease;
+  margin-top: 0px;
 }
 
 .faq-header {
@@ -113,6 +114,7 @@
 .faq-number {
   font-size: 4.2rem;
   font-family: "Anton";
+  font-style: italic;
   color: #FFDA00;
   font-weight: 800;
 }
@@ -212,11 +214,15 @@
 }
 
 .cs-heading-faq {
-  font-size: 40px;
+  font-size: 38px;
 }
   .faq-title-top {
     font-size: 44px;
     margin-bottom: 15px;
+  }
+
+  .faq-label {
+    font-size: 23px;
   }
 
   .faq-header {
@@ -225,7 +231,7 @@
   }
 
   .faq-number {
-    font-size: 1.7rem;
+    font-size: 23px;
   }
 
   .faq-header .arrow {
@@ -248,8 +254,8 @@
   }
 
   .faq-header .arrow img{
-  width: 30px;             
-  height: 30px;
+  width: 25px;             
+  height: 25px;
   object-fit: contain;
   transition: transform 0.3s ease, filter 0.3s ease;
   display: block;

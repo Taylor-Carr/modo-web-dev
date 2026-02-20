@@ -26,11 +26,11 @@
 }
 
 .cs-heading-pricing {
+  line-height: 1.1;
   margin: 0 0 20px;
   font-family: "Anton", sans-serif;
   font-style: italic;
-  font-size: 110px;
-  line-height: 1;
+  font-size: 90px;
   letter-spacing: 2px;
   color: #ffda00;
   text-transform: capitalize;
@@ -237,7 +237,9 @@
 }
 
 @media (max-width: 600px) {
-
+  .pricing-title-break {
+    display: none;
+  }
   .cs-head-pricing {
   max-width: 1400px;
   margin: 0 auto 5px;
@@ -254,7 +256,7 @@
 }
 
 .cs-heading-pricing {
-font-size: 40px;
+font-size: 44px;
 }
 
 .pricing-header-right p {

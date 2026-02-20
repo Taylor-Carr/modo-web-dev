@@ -36,8 +36,8 @@
   margin: 0 0 20px;
   font-family: "Anton", sans-serif;
   font-style: italic;
-  font-size: 110px;
-  line-height: 1;
+  font-size: 90px;
+  line-height: 1.1;
   letter-spacing: 2px;
   color: #fff;
   text-transform: capitalize;
@@ -207,7 +207,7 @@
 
 
 .cs-heading-projects {
-  font-size: 40px;
+  font-size: 36px;
 }
 
   .cs-shell{
