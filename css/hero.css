@@ -36,8 +36,8 @@
     color: black;
     font-family: 'Anton';
     font-style: italic;
-    font-size: 90px;
-    font-weight: 600;
+    font-size: 100px;
+    font-weight: 800;
     line-height: 1;
     letter-spacing: 5px;
 }
@@ -45,8 +45,8 @@
 #changingWord{
   display: inline-block;
   font-style: italic;
-  font-weight: 600;
-  font-size: 90px;
+  font-weight: 800;
+  font-size: 100px;
   letter-spacing: -0.2px;
 }
 
@@ -477,7 +477,7 @@
         font-size: 15px;
         font-weight: 400;
         max-width: 310px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     #changingWord {

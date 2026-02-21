@@ -54,9 +54,40 @@
   font-weight: 400;
   color: rgba(255,255,255,.75);
   max-width: 345px;
-  font-size: 14px;
+  font-size: 15px;
   text-align: left;
   margin: 0;
+}
+
+.cta-motion-link {
+  display: inline-flex;
+  align-items: center;       
+  gap: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  color: #ffda00;
+  padding: 10px 10px 10 0px;
+  border-radius: 6px;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+
+.cta-motion-arrow {
+  width: 8px;
+  height: 12px;
+  display: block;             
+}
+
+
+.cta-motion-link:hover .cta-motion-arrow {
+  transform: translateX(3px);
+}
+
+.cta-motion-link .cta-arrow {
+  transition: transform 0.2s ease;
 }
 
 .motion-tabs {
@@ -413,7 +444,7 @@
   } 
 
   .motion-title {
-    font-size: 38px;
+    font-size: 34px;
   }
 
   .motion-panel {
